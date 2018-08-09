@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Ug-9H-fkq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LwE-Tu-Gc9">
+            <objects>
+                <navigationController id="4Ug-9H-fkq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zL7-wa-wrx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SY3-K4-NHM" kind="relationship" relationship="rootViewController" id="6aE-RX-zG7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1T-0q-3pa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="-134"/>
+        </scene>
+        <!--Information Contents View Controller-->
+        <scene sceneID="TqV-1P-0lk">
+            <objects>
+                <viewController id="SY3-K4-NHM" customClass="InformationContentsViewController" customModule="MenuContentsExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q8h-5d-TaZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="見出し：お知らせコンテンツ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6g-By-dOZ">
+                                <rect key="frame" x="20" y="80" width="335" height="13"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcP-EG-bkr">
+                                <rect key="frame" x="20" y="105" width="335" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="gis-gk-Ed4"/>
+                                    <constraint firstAttribute="height" priority="250" constant="88" id="wlt-zZ-Nzj"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">解説：
+こちらは左側のタブでコンテンツを切り替えることで表示される画面になります。
+お知らせの一覧等メインコンテンツとは他に見せたいものをここに表示します。</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HiraginoSans-W3"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="u6g-By-dOZ" firstAttribute="top" secondItem="EAi-cW-Oc7" secondAttribute="top" constant="16" id="7oJ-g2-B9O"/>
+                            <constraint firstItem="EAi-cW-Oc7" firstAttribute="trailing" secondItem="u6g-By-dOZ" secondAttribute="trailing" constant="20" id="9tl-jm-V5A"/>
+                            <constraint firstItem="u6g-By-dOZ" firstAttribute="leading" secondItem="q8h-5d-TaZ" secondAttribute="leading" constant="20" id="NHe-5Y-wBe"/>
+                            <constraint firstItem="tcP-EG-bkr" firstAttribute="leading" secondItem="q8h-5d-TaZ" secondAttribute="leading" constant="20" id="Vqb-hQ-DTH"/>
+                            <constraint firstItem="EAi-cW-Oc7" firstAttribute="trailing" secondItem="tcP-EG-bkr" secondAttribute="trailing" constant="20" id="cJB-d8-kz9"/>
+                            <constraint firstItem="tcP-EG-bkr" firstAttribute="top" secondItem="u6g-By-dOZ" secondAttribute="bottom" constant="12" id="lmv-PX-8iR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EAi-cW-Oc7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6bQ-Mc-V6p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJy-pM-xj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728.8" y="-134.48275862068968"/>
+        </scene>
+    </scenes>
+</document>

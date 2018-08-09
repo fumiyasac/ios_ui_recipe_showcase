@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gC6-Ip-D8f">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tkw-Pj-ljd">
+            <objects>
+                <navigationController id="gC6-Ip-D8f" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uZu-nx-aHr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="trJ-tf-OUy" kind="relationship" relationship="rootViewController" id="lCi-n0-7mA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5l-fI-fzL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="-134"/>
+        </scene>
+        <!--Main Contents View Controller-->
+        <scene sceneID="5Jy-Gd-nGd">
+            <objects>
+                <viewController id="trJ-tf-OUy" customClass="MainContentsViewController" customModule="MenuContentsExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uPb-ua-Hes">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="見出し：メインコンテンツ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbB-q4-WmU">
+                                <rect key="frame" x="20" y="80" width="335" height="13"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmG-Qv-LjO">
+                                <rect key="frame" x="20" y="105" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="88" id="Vuj-6f-3s3"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="ncz-C1-J1g"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">解説：
+こちらはメイン（一番最初にも表示される）画面になります。
+一番見せたいものをここに表示します。</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HiraginoSans-W3"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MmG-Qv-LjO" firstAttribute="top" secondItem="FbB-q4-WmU" secondAttribute="bottom" constant="12" id="4VK-87-BUg"/>
+                            <constraint firstItem="qT0-uB-f2N" firstAttribute="trailing" secondItem="FbB-q4-WmU" secondAttribute="trailing" constant="20" id="Cey-eD-Mo0"/>
+                            <constraint firstItem="qT0-uB-f2N" firstAttribute="trailing" secondItem="MmG-Qv-LjO" secondAttribute="trailing" constant="20" id="GNI-Y1-6oq"/>
+                            <constraint firstItem="MmG-Qv-LjO" firstAttribute="leading" secondItem="qT0-uB-f2N" secondAttribute="leading" constant="20" id="QRi-AK-Jyr"/>
+                            <constraint firstItem="FbB-q4-WmU" firstAttribute="leading" secondItem="qT0-uB-f2N" secondAttribute="leading" constant="20" id="SW5-Vy-kns"/>
+                            <constraint firstItem="FbB-q4-WmU" firstAttribute="top" secondItem="qT0-uB-f2N" secondAttribute="top" constant="16" id="cWL-dU-vJc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qT0-uB-f2N"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="izs-Un-Bem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKy-AZ-7rW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728.8" y="-134.48275862068968"/>
+        </scene>
+    </scenes>
+</document>
