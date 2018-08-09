@@ -1,0 +1,24 @@
+PODS:
+  - ActiveLabel (0.9.0)
+  - Cosmos (16.0.0)
+  - FontAwesome.swift (1.4.3)
+
+DEPENDENCIES:
+  - ActiveLabel
+  - Cosmos
+  - FontAwesome.swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ActiveLabel
+    - Cosmos
+    - FontAwesome.swift
+
+SPEC CHECKSUMS:
+  ActiveLabel: c4fdd14a288483e98b5a3dff0ab214699aeee74a
+  Cosmos: 7bcee0fa858a9355a214f2a181be5dffcee42c81
+  FontAwesome.swift: 4b9ba1e1f3418a626f3ab67b230856ab6eb4860f
+
+PODFILE CHECKSUM: 9cae3c5f406d7fa05cb36aad3aa122b28c3e7f7e
+
+COCOAPODS: 1.5.3
