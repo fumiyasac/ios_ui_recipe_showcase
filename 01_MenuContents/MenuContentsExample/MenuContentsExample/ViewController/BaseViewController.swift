@@ -320,7 +320,7 @@ class BaseViewController: UIViewController {
 
 extension BaseViewController: SideNavigationButtonDelegate {
 
-    // mainContentsContainerで表示する
+    // mainContentsContainerで表示するコンテンツないしはSFSafariViewControllerで表示するページを決める
     func changeMainContentsContainer(_ buttonType: Int) {
 
         // SideNavigationButtonDelegateで渡された値が現在表示されている値かどうかを判定する

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // UIColorの拡張
 extension UIColor {

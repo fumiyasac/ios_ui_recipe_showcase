@@ -17,7 +17,7 @@ extension UIViewController {
 
         // NavigationControllerのデザイン調整を行う
         var attributes = [NSAttributedStringKey : Any]()
-        attributes[NSAttributedStringKey.font]             = UIFont(name: AppConstants.FONT_NAME, size: 14.0)
+        attributes[NSAttributedStringKey.font]             = UIFont(name: "HiraKakuProN-W3", size: 14.0)
         attributes[NSAttributedStringKey.foregroundColor]  = UIColor.init(code: "#333333")
 
         self.navigationController!.navigationBar.tintColor           = UIColor.init(code: "#DDDDDD")
