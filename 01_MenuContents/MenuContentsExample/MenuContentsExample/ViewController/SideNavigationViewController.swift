@@ -48,7 +48,7 @@ class SideNavigationViewController: UIViewController {
     // サイドナビゲーションが閉じた状態から左隅のドラッグを行ってコンテンツを開く際の処理
     @objc private func sideNavigationButtonTapped(sender: UIButton) {
 
-        //
+        // それぞれのボタンに関しては、SideNavigationButtonTypeで定義されたボタン種別をtagプロパティに渡している
         let selectedButtonType = sender.tag
         self.delegate?.changeMainContentsContainer(selectedButtonType)
     }
