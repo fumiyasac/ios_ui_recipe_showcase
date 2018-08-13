@@ -27,6 +27,13 @@
 		DE8885F0211D7D4B0006FBC6 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8885EE211D7D4B0006FBC6 /* News.storyboard */; };
 		DE8885F3211D7DA40006FBC6 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8885F1211D7DA40006FBC6 /* Detail.storyboard */; };
 		DE8885F5211D7FB30006FBC6 /* NSObjectProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8885F4211D7FB30006FBC6 /* NSObjectProtocolExtension.swift */; };
+		DE8885F9211F43980006FBC6 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8885F7211F43980006FBC6 /* MainCollectionViewCell.swift */; };
+		DE8885FA211F43980006FBC6 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE8885F8211F43980006FBC6 /* MainCollectionViewCell.xib */; };
+		DE8885FC211F830E0006FBC6 /* DetailTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8885FB211F830E0006FBC6 /* DetailTransition.swift */; };
+		DE8885FE211F832D0006FBC6 /* NewsTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8885FD211F832D0006FBC6 /* NewsTransition.swift */; };
+		DE888600211F8BF10006FBC6 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8885FF211F8BF10006FBC6 /* DetailInteractor.swift */; };
+		DE88860321204D3C0006FBC6 /* MainCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE88860221204D3C0006FBC6 /* MainCollectionHeaderView.xib */; };
+		DE88860521204D4A0006FBC6 /* MainCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE88860421204D4A0006FBC6 /* MainCollectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +82,13 @@
 		DE8885EF211D7D4B0006FBC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/News.storyboard; sourceTree = "<group>"; };
 		DE8885F2211D7DA40006FBC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Detail.storyboard; sourceTree = "<group>"; };
 		DE8885F4211D7FB30006FBC6 /* NSObjectProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtension.swift; sourceTree = "<group>"; };
+		DE8885F7211F43980006FBC6 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE8885F8211F43980006FBC6 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		DE8885FB211F830E0006FBC6 /* DetailTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTransition.swift; sourceTree = "<group>"; };
+		DE8885FD211F832D0006FBC6 /* NewsTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTransition.swift; sourceTree = "<group>"; };
+		DE8885FF211F8BF10006FBC6 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		DE88860221204D3C0006FBC6 /* MainCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionHeaderView.xib; sourceTree = "<group>"; };
+		DE88860421204D4A0006FBC6 /* MainCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +198,8 @@
 			children = (
 				DE24E6AD211D016D005637A1 /* CustomViewBase.swift */,
 				DE8885E4211D04C10006FBC6 /* DetailHeaderView.swift */,
+				DE888601211FE1190006FBC6 /* MainCollectionHeaderView */,
+				DE8885F6211F43700006FBC6 /* MainCollectionViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,6 +234,9 @@
 		DE24E6AB211CDDF5005637A1 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				DE8885FF211F8BF10006FBC6 /* DetailInteractor.swift */,
+				DE8885FB211F830E0006FBC6 /* DetailTransition.swift */,
+				DE8885FD211F832D0006FBC6 /* NewsTransition.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -231,6 +250,24 @@
 				DE8885E0211D036C0006FBC6 /* UIViewControllerExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		DE8885F6211F43700006FBC6 /* MainCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE8885F7211F43980006FBC6 /* MainCollectionViewCell.swift */,
+				DE8885F8211F43980006FBC6 /* MainCollectionViewCell.xib */,
+			);
+			path = MainCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		DE888601211FE1190006FBC6 /* MainCollectionHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				DE88860421204D4A0006FBC6 /* MainCollectionHeaderView.swift */,
+				DE88860221204D3C0006FBC6 /* MainCollectionHeaderView.xib */,
+			);
+			path = MainCollectionHeaderView;
 			sourceTree = "<group>";
 		};
 		E93742262BFD56A34DD2DEAC /* Frameworks */ = {
@@ -348,8 +385,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE24E683211CDD1A005637A1 /* LaunchScreen.storyboard in Resources */,
+				DE8885FA211F43980006FBC6 /* MainCollectionViewCell.xib in Resources */,
 				DE24E680211CDD1A005637A1 /* Assets.xcassets in Resources */,
 				DE24E67E211CDD15005637A1 /* Main.storyboard in Resources */,
+				DE88860321204D3C0006FBC6 /* MainCollectionHeaderView.xib in Resources */,
 				DE8885F3211D7DA40006FBC6 /* Detail.storyboard in Resources */,
 				DE8885F0211D7D4B0006FBC6 /* News.storyboard in Resources */,
 			);
@@ -424,13 +463,18 @@
 				DE8885E1211D036C0006FBC6 /* UIViewControllerExtension.swift in Sources */,
 				DE24E679211CDD15005637A1 /* AppDelegate.swift in Sources */,
 				DE8885E3211D03A60006FBC6 /* UICollectionViewExtension.swift in Sources */,
+				DE8885FC211F830E0006FBC6 /* DetailTransition.swift in Sources */,
+				DE8885F9211F43980006FBC6 /* MainCollectionViewCell.swift in Sources */,
 				DE8885E5211D04C10006FBC6 /* DetailHeaderView.swift in Sources */,
 				DE8885E9211D06BB0006FBC6 /* NewsViewController.swift in Sources */,
 				DE8885EB211D086F0006FBC6 /* Food.swift in Sources */,
 				DE8885DF211D03440006FBC6 /* UIColorExtension.swift in Sources */,
 				DE8885F5211D7FB30006FBC6 /* NSObjectProtocolExtension.swift in Sources */,
+				DE88860521204D4A0006FBC6 /* MainCollectionHeaderView.swift in Sources */,
+				DE8885FE211F832D0006FBC6 /* NewsTransition.swift in Sources */,
 				DE8885E7211D069B0006FBC6 /* DetailViewController.swift in Sources */,
 				DE8885ED211D08A30006FBC6 /* FoodPresenter.swift in Sources */,
+				DE888600211F8BF10006FBC6 /* DetailInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
