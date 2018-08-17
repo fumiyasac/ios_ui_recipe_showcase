@@ -10,14 +10,17 @@ import UIKit
 import FontAwesome_swift
 
 class MainCollectionViewCell: UICollectionViewCell {
-
+    
     // 各々のセル間につけるマージンの値
     static let cellMargin: CGFloat = 1.0
 
     // FontAwesome_Swiftで表示するイメージのサイズ
     private let iconImageSize: CGSize = CGSize(width: 15, height: 15)
 
-    @IBOutlet weak private var foodImageView: UIImageView!
+    // 補足: この画像の配置位置が欲しいのでprivateにしていない
+    @IBOutlet weak var foodImageView: UIImageView!
+
+    // このクラスのみで使用する表示に関する部品
     @IBOutlet weak private var iconImageView: UIImageView!
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var priceLabel: UILabel!

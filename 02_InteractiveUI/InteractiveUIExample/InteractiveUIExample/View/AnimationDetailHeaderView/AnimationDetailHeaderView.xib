@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationDetailHeaderView" customModule="InteractiveUIExample" customModuleProvider="target">
             <connections>
+                <outlet property="headerBackButton" destination="UYn-yi-TMA" id="jwY-U7-dyi"/>
                 <outlet property="headerBackgroundView" destination="ZUh-f2-ZLB" id="JRt-49-6HR"/>
                 <outlet property="headerTitle" destination="eDK-NE-dOi" id="kBd-ko-l5L"/>
                 <outlet property="headerWrappedViewTopConstraint" destination="OPw-ew-XMy" id="scy-4y-SMK"/>

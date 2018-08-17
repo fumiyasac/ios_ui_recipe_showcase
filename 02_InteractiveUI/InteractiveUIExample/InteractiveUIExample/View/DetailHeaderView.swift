@@ -20,15 +20,15 @@ class DetailHeaderView: UIView {
 
     // MARK: - Initializer
 
-    // このカスタムビューをコードで使用する際の初期化処理
     required override init(frame: CGRect) {
         super.init(frame: frame)
+
         setupDetailHeaderView()
     }
     
-    // このカスタムビューをInterfaceBuilderで使用する際の初期化処理
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+
         setupDetailHeaderView()
     }
     
@@ -39,15 +39,12 @@ class DetailHeaderView: UIView {
         imageView.image         = targetImage
         imageView.contentMode   = .scaleAspectFill
         imageView.clipsToBounds = true
-
-        // DetailTransitionに設定しているタグ値(customAnimatorTag = 99)を合わせる
-        imageView.tag           = 99
     }
 
     // UIScrollViewの変化量に応じてAutoLayoutの制約を動的に変更する
     func setParallaxEffectToHeaderView(_ scrollView: UIScrollView) {
 
-        // スクロールビューの上方向の余白の変化量をwrappedViewの高さに加算する
+        // UIScrollViewの上方向の余白の変化量をwrappedViewの高さに加算する
         // 参考：http://blogios.stack3.net/archives/1663
         wrappedViewHeightLayoutConstraint.constant = scrollView.contentInset.top
 

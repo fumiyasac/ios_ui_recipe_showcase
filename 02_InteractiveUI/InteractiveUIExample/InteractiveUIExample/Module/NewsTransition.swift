@@ -46,7 +46,7 @@ extension NewsTransition: UIViewControllerAnimatedTransitioning {
             return
         }
 
-        // アニメーションの実体となるコンテナビューを作成する
+        // アニメーションの実体となるContainerViewを作成する
         let containerView = transitionContext.containerView
 
         // 表示させるViewControllerを格納するための変数を定義する

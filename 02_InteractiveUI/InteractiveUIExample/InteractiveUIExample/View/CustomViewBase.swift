@@ -17,13 +17,13 @@ class CustomViewBase: UIView {
     // コンテンツ表示用のView
     weak var contentView: UIView!
 
-    // このカスタムビューをコードで使用する際の初期化処理
+    // このカスタムViewをコードで使用する際の初期化処理
     required override init(frame: CGRect) {
         super.init(frame: frame)
         initContentView()
     }
 
-    // このカスタムビューをInterfaceBuilderで使用する際の初期化処理
+    // このカスタムViewをInterfaceBuilderで使用する際の初期化処理
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initContentView()

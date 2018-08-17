@@ -95,7 +95,7 @@
                 <constraint firstAttribute="trailing" secondItem="IJm-dk-NEi" secondAttribute="trailing" id="uJd-0B-gif"/>
                 <constraint firstAttribute="bottom" secondItem="jP2-oq-i0T" secondAttribute="bottom" id="xTl-rT-NAt"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <viewLayoutGuide key="safeArea" id="xez-ta-81Q"/>
             <connections>
                 <outlet property="englishNameLabel" destination="mRY-X5-DaJ" id="gGj-ch-fv9"/>
                 <outlet property="foodImageView" destination="IJm-dk-NEi" id="Vg2-Ti-wze"/>

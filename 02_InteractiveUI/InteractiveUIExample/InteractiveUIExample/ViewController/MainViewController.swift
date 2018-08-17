@@ -18,7 +18,14 @@ class MainViewController: UIViewController {
 
     // カスタムトランジションを実行するためのインスタンス
     private let newsTransition   = NewsTransition()
-//    private let detailTransition = DetailTransition()
+    private let detailTransition = DetailTransition()
+
+    //
+    private var selectedFrame: CGRect?
+    private var selectedImage: UIImage?
+
+    //
+    private var detailInteractor: DetailInteractor?
 
     @IBOutlet weak private var foodListCollectionView: UICollectionView!
 
@@ -39,13 +46,15 @@ class MainViewController: UIViewController {
     private func setupNavigationController() {
 
         // UINavigationControllerDelegateの宣言
-//        self.navigationController?.delegate = self
+        self.navigationController?.delegate = self
 
         // NavigationBarのデザイン調整を行う
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.tintColor = UIColor.white
         
         // タイトルを表示する
+        removeBackButtonText()
         setupNavigationBarTitle("お寿司の一覧")
 
         // NavigationBarの下に配置するUIViewの幅と高さを算出する
@@ -129,6 +138,24 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.setCell(food)
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! MainCollectionViewCell
+
+        selectedImage = cell.foodImageView.image
+        selectedFrame = view.convert(cell.foodImageView.frame, from: cell.foodImageView.superview)
+
+        //
+        let storyboard = UIStoryboard(name: "Detail", bundle: nil)
+        let controller = storyboard.instantiateInitialViewController() as! DetailViewController
+        
+        //
+        let food = foodList[indexPath.row]
+        controller.setTargetFood(food)
+        
+        //
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
@@ -188,3 +215,35 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
     }
 }
+
+// MARK: - UINavigationControllerDelegate
+
+extension MainViewController: UINavigationControllerDelegate {
+
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        guard let targetInteractor = detailInteractor else { return nil }
+        return targetInteractor.transitionInProgress ? detailInteractor : nil
+    }
+
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
+        // カスタムトランジションのクラスに定義したプロパティへFrame情報とUIImage情報を渡す
+        guard let frame = selectedFrame else { return nil }
+        guard let image = selectedImage else { return nil }
+
+        detailTransition.originFrame = frame
+        detailTransition.originImage = image
+
+        switch operation {
+        case .push:
+            self.detailInteractor = DetailInteractor(attachTo: toVC)
+            detailTransition.presenting  = true
+            return detailTransition
+        default:
+            detailTransition.presenting  = false
+            return detailTransition
+        }
+    }
+}
+
+

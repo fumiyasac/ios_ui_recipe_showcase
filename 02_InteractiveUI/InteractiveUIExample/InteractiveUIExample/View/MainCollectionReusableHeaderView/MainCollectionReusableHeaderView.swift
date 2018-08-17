@@ -25,6 +25,8 @@ class MainCollectionReusableHeaderView: UICollectionReusableView {
     // MARK: - Private Function
 
     @objc private func newsContentsButtonTapped(sender: UIButton) {
+
+        // ViewController側でクロージャー内にセットした処理を実行する
         newsButtonTappedHandler?()
     }
 

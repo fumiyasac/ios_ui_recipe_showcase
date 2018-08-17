@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KnR-a0-WQM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FOf-hl-3Fb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,13 +19,10 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="FOf-hl-3Fb" kind="relationship" relationship="rootViewController" id="8kV-ST-eCw"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrH-29-gm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="134"/>
+            <point key="canvasLocation" x="-111" y="134"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="urT-7c-Rdt">
@@ -35,6 +32,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="99" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F6u-VU-57P">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F6u-VU-57P" secondAttribute="height" multiplier="4:3" id="uJL-9f-RPX"/>
+                                </constraints>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KB3-yt-728">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                                 <subviews>
@@ -43,7 +46,6 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3N-TR-lSB" customClass="DetailHeaderView" customModule="InteractiveUIExample" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
-                                                <color key="backgroundColor" red="0.99607843139999996" green="0.79215686269999996" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="M3N-TR-lSB" secondAttribute="height" multiplier="4:3" id="mh5-Vo-QFb"/>
                                                 </constraints>
@@ -85,8 +87,11 @@
                         <constraints>
                             <constraint firstItem="KB3-yt-728" firstAttribute="leading" secondItem="7O9-Fu-Ivh" secondAttribute="leading" id="7nd-g6-x6T"/>
                             <constraint firstItem="KB3-yt-728" firstAttribute="bottom" secondItem="7O9-Fu-Ivh" secondAttribute="bottom" id="K0L-j6-MkA"/>
+                            <constraint firstItem="F6u-VU-57P" firstAttribute="leading" secondItem="7O9-Fu-Ivh" secondAttribute="leading" id="LSa-b8-80x"/>
+                            <constraint firstItem="F6u-VU-57P" firstAttribute="trailing" secondItem="7O9-Fu-Ivh" secondAttribute="trailing" id="Nxx-FR-czS"/>
                             <constraint firstItem="KB3-yt-728" firstAttribute="trailing" secondItem="7O9-Fu-Ivh" secondAttribute="trailing" id="TKs-jZ-xUg"/>
                             <constraint firstItem="KB3-yt-728" firstAttribute="top" secondItem="PLR-1V-nSn" secondAttribute="top" id="Znu-NE-gEI"/>
+                            <constraint firstItem="F6u-VU-57P" firstAttribute="top" secondItem="PLR-1V-nSn" secondAttribute="top" id="fc4-PF-UzA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7O9-Fu-Ivh"/>
                     </view>
@@ -95,11 +100,12 @@
                     <connections>
                         <outlet property="detailHeaderView" destination="M3N-TR-lSB" id="DuZ-mI-O6E"/>
                         <outlet property="detailScrollView" destination="KB3-yt-728" id="GQM-yc-yHi"/>
+                        <outlet property="transitionTargetImageView" destination="F6u-VU-57P" id="GUF-cW-eVO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7X-HF-Rcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877.60000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="877.60000000000002" y="133.13343328335833"/>
         </scene>
     </scenes>
 </document>
