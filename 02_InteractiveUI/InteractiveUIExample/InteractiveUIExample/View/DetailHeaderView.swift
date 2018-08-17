@@ -33,12 +33,17 @@ class DetailHeaderView: UIView {
     }
     
     // MARK: - Function
-    
+
     // バウンス効果のあるUIImageViewに表示する画像をセットする
     func setHeaderImage(_ targetImage: UIImage) {
-        imageView.image = targetImage
+        imageView.image         = targetImage
+        imageView.contentMode   = .scaleAspectFill
+        imageView.clipsToBounds = true
+
+        // DetailTransitionに設定しているタグ値(customAnimatorTag = 99)を合わせる
+        imageView.tag           = 99
     }
-    
+
     // UIScrollViewの変化量に応じてAutoLayoutの制約を動的に変更する
     func setParallaxEffectToHeaderView(_ scrollView: UIScrollView) {
 

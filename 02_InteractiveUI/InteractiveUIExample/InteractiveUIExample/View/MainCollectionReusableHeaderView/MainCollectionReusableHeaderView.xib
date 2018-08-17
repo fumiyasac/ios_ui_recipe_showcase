@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="MainCollectionReusableHeaderView" customModule="InteractiveUIExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nQ-SO-Lvy">
+                    <rect key="frame" x="8" y="16" width="212" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="250" constant="88" id="a4H-7w-IcB"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="oF8-yg-zNm"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="こちらはみんなが大好きなお寿司に関する紹介コンテンツになります。">
+                            <attributes>
+                                <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="12" name="HiraginoSans-W3"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rq-YO-LOl">
+                    <rect key="frame" x="232" y="16" width="80" height="32"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="6hC-ye-H0f"/>
+                        <constraint firstAttribute="width" constant="80" id="8Bk-TS-uU3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="12"/>
+                    <state key="normal" title="▶︎ ニュース">
+                        <color key="titleColor" red="0.99215686270000003" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="0rq-YO-LOl" firstAttribute="leading" secondItem="8nQ-SO-Lvy" secondAttribute="trailing" constant="12" id="LLH-1s-VFH"/>
+                <constraint firstItem="0rq-YO-LOl" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" constant="16" id="Vy4-e0-46S"/>
+                <constraint firstItem="8nQ-SO-Lvy" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" constant="16" id="bWJ-eX-4sW"/>
+                <constraint firstItem="0rq-YO-LOl" firstAttribute="leading" secondItem="8nQ-SO-Lvy" secondAttribute="trailing" constant="12" id="d7M-6Z-bpO"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="0rq-YO-LOl" secondAttribute="bottom" constant="16" id="gXp-k0-oFr"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="0rq-YO-LOl" secondAttribute="trailing" constant="8" id="ieL-4D-QBD"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="8nQ-SO-Lvy" secondAttribute="bottom" constant="16" id="oK8-tu-2c0"/>
+                <constraint firstItem="8nQ-SO-Lvy" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="8" id="vwx-vh-JaP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="newsContentsButton" destination="0rq-YO-LOl" id="hNI-ph-JIG"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>

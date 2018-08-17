@@ -11,11 +11,11 @@ import UIKit
 
 class DetailTransition: NSObject {
 
-    // トランジションの秒数
-    private let duration: TimeInterval = 0.28
-
     // アニメーション対象となる画像のtag番号(遷移先のUIImageViewに付与する)
     private let customAnimatorTag = 99
+
+    // トランジションの秒数
+    private let duration: TimeInterval = 0.28
 }
 
 // MARK: - UIViewControllerAnimatedTransitioning

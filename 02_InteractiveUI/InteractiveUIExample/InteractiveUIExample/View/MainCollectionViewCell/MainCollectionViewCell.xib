@@ -30,22 +30,22 @@
                         <rect key="frame" x="0.0" y="120" width="160" height="65"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英語名: Sushi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRY-X5-DaJ">
-                                <rect key="frame" x="93" y="48.5" width="59" height="9"/>
+                                <rect key="frame" x="9" y="48.5" width="142" height="9"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="9"/>
                                 <color key="textColor" red="0.38306416321428571" green="0.62947686889999999" blue="0.26852733285714286" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="oGb-4D-ggt">
-                                <rect key="frame" x="8" y="8.5" width="144" height="13"/>
+                                <rect key="frame" x="8" y="8.5" width="144" height="15"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0KQ-BL-CVz">
-                                        <rect key="frame" x="0.0" y="0.0" width="13" height="13"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="13" id="6GB-70-sEE"/>
+                                            <constraint firstAttribute="width" constant="15" id="6GB-70-sEE"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お寿司のネタ名" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dx4-0O-BLW">
-                                        <rect key="frame" x="16" y="0.0" width="128" height="13"/>
+                                        <rect key="frame" x="18" y="0.0" width="126" height="15"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -57,27 +57,28 @@
                                     <constraint firstAttribute="bottom" secondItem="dx4-0O-BLW" secondAttribute="bottom" id="Ut5-1X-DcS"/>
                                     <constraint firstItem="dx4-0O-BLW" firstAttribute="top" secondItem="oGb-4D-ggt" secondAttribute="top" id="geZ-3h-a5P"/>
                                     <constraint firstItem="dx4-0O-BLW" firstAttribute="top" secondItem="oGb-4D-ggt" secondAttribute="top" id="kCc-rK-VGQ"/>
-                                    <constraint firstAttribute="height" constant="13" id="wLF-Tg-a9c"/>
+                                    <constraint firstAttribute="height" constant="15" id="wLF-Tg-a9c"/>
                                     <constraint firstAttribute="bottom" secondItem="dx4-0O-BLW" secondAttribute="bottom" id="wdD-10-Gol"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お値段: ¥300（1貫）" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDM-AE-Tpa">
-                                <rect key="frame" x="8" y="29.5" width="144" height="11"/>
+                                <rect key="frame" x="8" y="30.5" width="144" height="11"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
-                                <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="65" id="Bsm-Jv-z6Q"/>
-                            <constraint firstAttribute="trailing" secondItem="mRY-X5-DaJ" secondAttribute="trailing" constant="8" id="Fln-Rw-l2R"/>
+                            <constraint firstAttribute="trailing" secondItem="mRY-X5-DaJ" secondAttribute="trailing" constant="9" id="Fln-Rw-l2R"/>
                             <constraint firstItem="oGb-4D-ggt" firstAttribute="top" secondItem="jP2-oq-i0T" secondAttribute="top" constant="8" id="OYr-y5-wDI"/>
                             <constraint firstAttribute="trailing" secondItem="oGb-4D-ggt" secondAttribute="trailing" constant="8" id="T8f-NC-eAi"/>
                             <constraint firstItem="iDM-AE-Tpa" firstAttribute="leading" secondItem="jP2-oq-i0T" secondAttribute="leading" constant="8" id="U9Z-vr-9q1"/>
-                            <constraint firstItem="mRY-X5-DaJ" firstAttribute="top" secondItem="iDM-AE-Tpa" secondAttribute="bottom" constant="8" id="Whm-P9-P2X"/>
-                            <constraint firstItem="iDM-AE-Tpa" firstAttribute="top" secondItem="oGb-4D-ggt" secondAttribute="bottom" constant="8" id="cSW-zH-CTu"/>
+                            <constraint firstItem="mRY-X5-DaJ" firstAttribute="leading" secondItem="jP2-oq-i0T" secondAttribute="leading" constant="9" id="UVZ-jg-8jE"/>
+                            <constraint firstItem="mRY-X5-DaJ" firstAttribute="top" secondItem="iDM-AE-Tpa" secondAttribute="bottom" constant="7" id="Whm-P9-P2X"/>
                             <constraint firstAttribute="bottom" secondItem="mRY-X5-DaJ" secondAttribute="bottom" constant="8" id="hJn-66-vS3"/>
+                            <constraint firstItem="iDM-AE-Tpa" firstAttribute="top" secondItem="oGb-4D-ggt" secondAttribute="bottom" constant="7" id="jnn-eC-HZW"/>
                             <constraint firstAttribute="trailing" secondItem="iDM-AE-Tpa" secondAttribute="trailing" constant="8" id="mPF-vw-k2e"/>
                             <constraint firstItem="oGb-4D-ggt" firstAttribute="leading" secondItem="jP2-oq-i0T" secondAttribute="leading" constant="8" id="uDv-3Y-fLN"/>
                         </constraints>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wv8-Tf-TP1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pNO-Cg-Wt1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,17 +13,70 @@
         <!--News View Controller-->
         <scene sceneID="8NX-5u-ut9">
             <objects>
-                <viewController id="wv8-Tf-TP1" customClass="NewsViewController" customModule="InteractiveUIExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsViewController" id="wv8-Tf-TP1" customClass="NewsViewController" customModule="InteractiveUIExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BHf-dZ-L5w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ニュースコンテンツ（寿司について）" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgf-4z-923">
+                                <rect key="frame" x="20" y="80" width="335" height="13"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ece-h9-MYy">
+                                <rect key="frame" x="20" y="105" width="335" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="T31-rf-lsu"/>
+                                    <constraint firstAttribute="height" priority="250" constant="88" id="gpM-Qh-rz7"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">こちらのコンテンツはサンプルになります：
+外国の方にも人気が高いお寿司の中でも、これはうまい！と思えるものをピックアップしてみました。
+ただ鮮度が良い生の魚を酢飯の上に乗せただけのものではない、繊細でありながらもインパクトのある味をお楽しみください。</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HiraginoSans-W3"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2M8-Y5-u1a" firstAttribute="trailing" secondItem="Qgf-4z-923" secondAttribute="trailing" constant="20" id="0Dt-w2-6af"/>
+                            <constraint firstItem="Ece-h9-MYy" firstAttribute="leading" secondItem="2M8-Y5-u1a" secondAttribute="leading" constant="20" id="2Rv-hU-zpj"/>
+                            <constraint firstItem="Ece-h9-MYy" firstAttribute="top" secondItem="Qgf-4z-923" secondAttribute="bottom" constant="12" id="RIQ-GZ-XIb"/>
+                            <constraint firstItem="Qgf-4z-923" firstAttribute="leading" secondItem="2M8-Y5-u1a" secondAttribute="leading" constant="20" id="Ssr-Wm-8dg"/>
+                            <constraint firstItem="Qgf-4z-923" firstAttribute="top" secondItem="2M8-Y5-u1a" secondAttribute="top" constant="16" id="crA-aZ-hT5"/>
+                            <constraint firstItem="2M8-Y5-u1a" firstAttribute="trailing" secondItem="Ece-h9-MYy" secondAttribute="trailing" constant="20" id="fdM-w3-CNA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2M8-Y5-u1a"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Zqc-6s-pXC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j12-vD-E2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="214" y="799"/>
+            <point key="canvasLocation" x="213.59999999999999" y="798.35082458770626"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cdg-i5-B3u">
+            <objects>
+                <navigationController id="pNO-Cg-Wt1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HJV-jn-lOX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wv8-Tf-TP1" kind="relationship" relationship="rootViewController" id="smt-fs-KwH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZq-N4-KgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-495" y="798"/>
         </scene>
     </scenes>
 </document>

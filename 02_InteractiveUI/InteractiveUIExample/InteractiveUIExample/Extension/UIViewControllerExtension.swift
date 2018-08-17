@@ -17,10 +17,10 @@ extension UIViewController {
 
         // NavigationControllerのデザイン調整を行う
         var attributes = [NSAttributedStringKey : Any]()
-        attributes[NSAttributedStringKey.font]             = UIFont(name: "HiraKakuProN-W3", size: 14.0)
-        attributes[NSAttributedStringKey.foregroundColor]  = UIColor.init(code: "#333333")
+        attributes[NSAttributedStringKey.font]             = UIFont(name: "HiraKakuProN-W6", size: 14.0)
+        attributes[NSAttributedStringKey.foregroundColor]  = UIColor.white
 
-        self.navigationController!.navigationBar.tintColor           = UIColor.init(code: "#DDDDDD")
+        self.navigationController!.navigationBar.tintColor           = UIColor(code: "#333333")
         self.navigationController!.navigationBar.titleTextAttributes = attributes
 
         // タイトルを入れる

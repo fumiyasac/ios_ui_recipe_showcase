@@ -30,16 +30,19 @@
                                 <cells/>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CEI-qO-41B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0fQ-5o-xct"/>
                             <constraint firstItem="CEI-qO-41B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cBe-iT-Hln"/>
                             <constraint firstItem="CEI-qO-41B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d8o-Bo-eUV"/>
-                            <constraint firstItem="CEI-qO-41B" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qkT-HF-lMN"/>
+                            <constraint firstItem="CEI-qO-41B" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="qkT-HF-lMN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vjg-0c-KDU"/>
+                    <connections>
+                        <outlet property="foodListCollectionView" destination="CEI-qO-41B" id="t85-FE-hc1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
