@@ -14,9 +14,6 @@ class MainCollectionViewCell: UICollectionViewCell {
     // 各々のセル間につけるマージンの値
     static let cellMargin: CGFloat = 1.0
 
-    // FontAwesome_Swiftで表示するイメージのサイズ
-    private let iconImageSize: CGSize = CGSize(width: 15, height: 15)
-
     // 補足: この画像の配置位置が欲しいのでprivateにしていない
     @IBOutlet weak var foodImageView: UIImageView!
 
@@ -60,7 +57,8 @@ class MainCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Private Function
 
+    // FontAwesome_Swiftで表示するイメージの設定を行う
     private func setupMainCollectionViewCell() {
-        iconImageView.image = UIImage.fontAwesomeIcon(name: .fish, style: .solid, textColor: UIColor(code: "#7182ff"), size: iconImageSize)
+        iconImageView.image = UIImage.fontAwesomeIcon(name: .fish, style: .solid, textColor: UIColor(code: "#7182ff"), size: CGSize(width: 15, height: 15))
     }
 }

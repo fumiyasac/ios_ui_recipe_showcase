@@ -6,13 +6,7 @@ Settings that define the appearance of the star rating views.
 
 */
 public struct CosmosSettings {
-
-  /// Returns default set of settings for CosmosView
-  public static var `default`: CosmosSettings {
-    return CosmosSettings()
-  }
-
-  public init() {}
+  init() {}
   
   // MARK: - Star settings
   // -----------------------------

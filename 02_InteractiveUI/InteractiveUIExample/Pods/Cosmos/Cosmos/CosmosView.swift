@@ -37,7 +37,7 @@ Shows: ★★★★☆ (123)
   }
   
   /// Star rating settings.
-  open var settings: CosmosSettings = .default {
+  open var settings = CosmosSettings() {
     didSet {
       update()
     }
@@ -52,16 +52,17 @@ Shows: ★★★★☆ (123)
     
     update()
   }
-
+  
+  
   /**
 
   Initializes and returns a newly allocated cosmos view object.
   
   */
-  public convenience init(settings: CosmosSettings = .default) {
-    self.init(frame: .zero, settings: settings)
+  convenience public init() {
+    self.init(frame: CGRect())
   }
-
+  
   /**
 
   Initializes and returns a newly allocated cosmos view object with the specified frame rectangle.
@@ -69,13 +70,8 @@ Shows: ★★★★☆ (123)
   - parameter frame: The frame rectangle for the view.
   
   */
-  override public convenience init(frame: CGRect) {
-    self.init(frame: frame, settings: .default)
-  }
-
-  public init(frame: CGRect, settings: CosmosSettings) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
-    self.settings = settings
     update()
     improvePerformance()
   }
@@ -205,18 +201,6 @@ Shows: ★★★★☆ (123)
   /// Returns the content size to fit all the star and text layers.
   override open var intrinsicContentSize:CGSize {
     return viewSize
-  }
-  
-  /**
-   
-  Prepares the Cosmos view for reuse in a table view cell.
-  If the cosmos view is used in a table view cell, call this method after the
-  cell is dequeued. Alternatively, override UITableViewCell's prepareForReuse method and call
-  this method from there.
-   
-  */
-  open func prepareForReuse() {
-    previousRatingForDidTouchCallback = -123.192
   }
   
   // MARK: - Accessibility

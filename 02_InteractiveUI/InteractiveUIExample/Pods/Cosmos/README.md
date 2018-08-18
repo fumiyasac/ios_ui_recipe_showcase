@@ -33,7 +33,7 @@ Simply add [CosmosDistrib.swift](https://github.com/evgenyneu/Cosmos/blob/master
 
 #### Setup with Carthage (iOS 8+)
 
-Alternatively, add `github "evgenyneu/Cosmos" ~> 16.0` to your Cartfile and run `carthage update`.
+Alternatively, add `github "evgenyneu/Cosmos" ~> 13.0` to your Cartfile and run `carthage update`.
 
 #### Setup with CocoaPods (iOS 8+)
 
@@ -41,7 +41,7 @@ If you are using CocoaPods add this text to your Podfile and run `pod install`.
 
     use_frameworks!
     target 'Your target name'
-    pod 'Cosmos', '~> 16.0'
+    pod 'Cosmos', '~> 13.0'
 
 
 #### Legacy Swift versions
@@ -71,6 +71,7 @@ Setup a [previous version](https://github.com/evgenyneu/Cosmos/wiki/Legacy-Swift
 
 <img src='https://raw.githubusercontent.com/evgenyneu/Cosmos/master/graphics/Screenshots/cosmos_customize_in_storyboard_2.png' width='502' alt='Customize cosmos appearance in the attributes inspector in Xcode.'>
 
+*Note*: Carthage setup method does not allow to customize Cosmos view from the storyboard, please do it from code instead.
 
 ## Positioning the Cosmos view
 
@@ -192,7 +193,6 @@ Here are some other star rating controls for iOS:
 
 We would like to thank the following people for their valuable contributions.
 
-* [jsahoo](https://github.com/jsahoo) for additing ability to customize the Cosmos view from the interface build with Carthage setup method.
 * [0x7fffffff](https://github.com/0x7fffffff) for changing `public` access-level modifiers to `open`.
 * [ali-zahedi](https://github.com/ali-zahedi) for updating to the latest version of Swift 3.0.
 * [augmentedworks](https://github.com/augmentedworks) for adding borders to filled stars.
@@ -202,8 +202,6 @@ We would like to thank the following people for their valuable contributions.
 * [staticdreams](https://github.com/staticdreams) for bringing tvOS support.
 * [wagnersouz4](https://github.com/wagnersouz4) for Swift 3.1 update.
 * [paoloq](https://github.com/paoloq) for reporting the CosmoView frame size issue when the view is used without Auto Layout.
-* [danshevluk](https://github.com/danshevluk) for adding ability to reuse settings in multiple cosmos views.
-* [xrayman](https://github.com/xrayman) for reporting a table view reusability bug and improving the table view screen of the demo app.
 
 
 ## License

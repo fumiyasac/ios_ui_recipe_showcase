@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import SafariServices
+import Cosmos
+import ActiveLabel
+import FontAwesome_swift
 
 class DetailViewController: UIViewController {
 
@@ -40,8 +44,17 @@ class DetailViewController: UIViewController {
     // 画像のパララックス効果付きのView(縦横比はMainCollectionViewCellの画像と同じに配置する)
     @IBOutlet weak private var detailHeaderView: DetailHeaderView!
 
-    // 表示に必要なUI部品の配置
+    // 表示に必要なUI部品の配置(ベースのScrollView)
     @IBOutlet weak private var detailScrollView: UIScrollView!
+
+    // 表示に必要なUI部品の配置(コンテンツに関する物)
+    @IBOutlet weak private var iconImageView: UIImageView!
+    @IBOutlet weak private var nameTextLabel: UILabel!
+    @IBOutlet weak private var englishNameTextLabel: UILabel!
+    @IBOutlet weak private var ratingStarView: CosmosView!
+    @IBOutlet weak private var ratingTextLabel: UILabel!
+    @IBOutlet weak private var priceTextLabel: UILabel!
+    @IBOutlet weak private var addtionalLinkLabel: ActiveLabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +81,9 @@ class DetailViewController: UIViewController {
             detailScrollView.contentInsetAdjustmentBehavior = .never
         }
         detailScrollView.delegate = self
+
+        // 変数: targetFoodを元に表示したい内容を反映する
+        setContentsFromTargetFood()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -96,6 +112,42 @@ class DetailViewController: UIViewController {
     // この画面の表示で使用するデータを遷移先からセットする
     func setTargetFood(_ food: Food) {
         targetFood = food
+    }
+
+    // MARK - Private Function
+
+    // この画面の表示で使用するデータを画面へ表示する
+    private func setContentsFromTargetFood() {
+
+        // FontAwesome_Swiftで表示するイメージの設定を行う
+        iconImageView.image = UIImage.fontAwesomeIcon(name: .fish, style: .solid, textColor: UIColor(code: "#7182ff"), size: CGSize(width: 20, height: 20))
+
+        // データを表示させる
+        nameTextLabel.text               = targetFood.name
+        englishNameTextLabel.text        = "英語名: " + targetFood.englishName
+        ratingStarView.settings.fillMode = .precise
+        ratingStarView.rating            = Double(targetFood.rate)
+        ratingTextLabel.text             = String(targetFood.rate)
+        priceTextLabel.text              = "お値段: ¥" + String(targetFood.price) + "（1貫）"
+
+        // リンク付きテキストの設定を行う
+        let withUrlString = "【写真素材】写真AC様\nhttps://www.photo-ac.com/ \n\n【使用したライブラリ】\nFontAwesome.swift:\nhttp://bit.ly/2vUpV2V \nCosmos:\nhttp://bit.ly/2MWg6rA \nActiveLabel.swift:\nhttp://bit.ly/2vQd41U \n\n【参考リンク】その他カスタムトランジションを使った表現\nHow to Create a Navigation Transition Like the Apple News App:\nhttp://bit.ly/2vVMlRi \nMaking the App Store iOS 11 Custom Transitions:\nhttp://bit.ly/2vSiiKt \n\n"
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 5
+
+        var attributes = [NSAttributedStringKey : Any]()
+        attributes[NSAttributedStringKey.paragraphStyle] = paragraphStyle
+        attributes[NSAttributedStringKey.font] = UIFont(name: "HiraKakuProN-W3", size: 12.0)
+        attributes[NSAttributedStringKey.foregroundColor] = UIColor(code: "#777777")
+
+        addtionalLinkLabel.enabledTypes  = [.url]
+        addtionalLinkLabel.attributedText = NSAttributedString(string: withUrlString, attributes: attributes)
+        addtionalLinkLabel.handleURLTap { url in
+
+            // SFSafariViewControllerで該当のリンク先を表示する
+            let vc = SFSafariViewController(url: url)
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 }
 
