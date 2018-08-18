@@ -97,12 +97,15 @@
 		DE14A473212807EF000C2F3D /* LikeTinderExample */ = {
 			isa = PBXGroup;
 			children = (
-				DE14A474212807EF000C2F3D /* AppDelegate.swift */,
-				DE14A476212807F0000C2F3D /* ViewController.swift */,
-				DE14A478212807F0000C2F3D /* Main.storyboard */,
-				DE14A47B212807F2000C2F3D /* Assets.xcassets */,
-				DE14A47D212807F2000C2F3D /* LaunchScreen.storyboard */,
 				DE14A480212807F2000C2F3D /* Info.plist */,
+				DE14A474212807EF000C2F3D /* AppDelegate.swift */,
+				DE14A47B212807F2000C2F3D /* Assets.xcassets */,
+				DE14A4A6212808D1000C2F3D /* Extension */,
+				DE14A4A4212808C3000C2F3D /* Model */,
+				DE14A4A5212808C9000C2F3D /* Presenter */,
+				DE14A4A7212808E7000C2F3D /* Storyboard */,
+				DE14A4A3212808BD000C2F3D /* View */,
+				DE14A4A2212808AC000C2F3D /* ViewController */,
 			);
 			path = LikeTinderExample;
 			sourceTree = "<group>";
@@ -123,6 +126,51 @@
 				DE14A496212807F2000C2F3D /* Info.plist */,
 			);
 			path = LikeTinderExampleUITests;
+			sourceTree = "<group>";
+		};
+		DE14A4A2212808AC000C2F3D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DE14A476212807F0000C2F3D /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DE14A4A3212808BD000C2F3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE14A4A4212808C3000C2F3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE14A4A5212808C9000C2F3D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DE14A4A6212808D1000C2F3D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DE14A4A7212808E7000C2F3D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DE14A478212807F0000C2F3D /* Main.storyboard */,
+				DE14A47D212807F2000C2F3D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

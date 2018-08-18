@@ -11,19 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="dDk-nI-7r8">
-            <objects>
-                <navigationController id="KnR-a0-WQM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DSi-t9-JxR">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qrH-29-gm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-111" y="134"/>
-        </scene>
         <!--Detail View Controller-->
         <scene sceneID="urT-7c-Rdt">
             <objects>
@@ -189,11 +176,11 @@
                                                         </constraints>
                                                         <attributedString key="attributedText">
                                                             <fragment>
-                                                                <mutableString key="content">まずはこちらのコンテンツにご興味を持っていただきまして本当にありがとうございます。
+                                                                <string key="content">まずはこちらのコンテンツにご興味を持っていただきまして本当にありがとうございます。
 一部のViewにだけデータとの連携をしたりしている関係で、サンプルそのままの状態な部分もありますが、このサンプルのUI実装において重要なところはコメントを厚めに残しておいてあるので、自由にご活用してください。
 UIの構成は基本的にはベースはStoryboardで実装していますが一部の実装部分においてはコードによる実装を組み合わせることで実現しています。またカスタムトランジションに関わる部分の実装については、こまめにSimulatorのスピードを調節したりブレークポイント等を活用して検証を進めていくと良いかと思います。
 また、ご意見やご要望ないしは不具合等のご報告をする場合はGiuhubのissueやメール等で頂けたら大変嬉しく思います。
-余談になってしまいますがサンプルの題材については、私がお寿司が好きなのでこの形になりました。</mutableString>
+余談になってしまいますがサンプルの題材については、私がお寿司が好きなのでこの形になりました。</string>
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" size="12" name="HiraginoSans-W3"/>
