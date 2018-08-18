@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zFz-bn-yKn">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="904.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="912.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3N-TR-lSB" customClass="DetailHeaderView" customModule="InteractiveUIExample" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
@@ -205,7 +205,7 @@ UIの構成は基本的にはベースはStoryboardで実装していますが�
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mny-Hy-99O">
-                                                <rect key="frame" x="0.0" y="835.5" width="375" height="69"/>
+                                                <rect key="frame" x="0.0" y="835.5" width="375" height="77"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="関連リンク集:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5y-Fe-Tys">
                                                         <rect key="frame" x="16" y="14" width="343" height="15"/>
@@ -214,7 +214,7 @@ UIの構成は基本的にはベースはStoryboardで実装していますが�
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="この部分はライブラリ: 「ActiveLabel」を利用しています。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-87-mMI" customClass="ActiveLabel" customModule="ActiveLabel">
-                                                        <rect key="frame" x="16" y="43" width="343" height="12"/>
+                                                        <rect key="frame" x="16" y="43" width="343" height="20"/>
                                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
                                                         <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
