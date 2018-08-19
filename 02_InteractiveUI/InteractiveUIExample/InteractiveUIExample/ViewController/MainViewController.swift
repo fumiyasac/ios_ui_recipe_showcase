@@ -16,15 +16,15 @@ class MainViewController: UIViewController {
     // FoodPresenterに設定したプロトコルを適用するための変数
     private var presenter: FoodPresenter!
 
-    // カスタムトランジションを実行するためのインスタンス
+    // カスタムトランジションを実行するためのクラス
     private let newsTransition   = NewsTransition()
     private let detailTransition = DetailTransition()
 
-    //
+    // カスタムトランジション側のクラスに引き渡す画像の情報とセルの位置情報
     private var selectedFrame: CGRect?
     private var selectedImage: UIImage?
 
-    //
+    // 画面遷移の進み具合に関する情報を保持するクラス
     private var detailInteractor: DetailInteractor?
 
     @IBOutlet weak private var foodListCollectionView: UICollectionView!
@@ -142,18 +142,19 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! MainCollectionViewCell
 
+        // タップしたセルよりセル内の画像と表示位置を取得する
         selectedImage = cell.foodImageView.image
         selectedFrame = view.convert(cell.foodImageView.frame, from: cell.foodImageView.superview)
 
-        //
+        // Storyboard名より遷移先のViewControllerのインスタンスを取得
         let storyboard = UIStoryboard(name: "Detail", bundle: nil)
         let controller = storyboard.instantiateInitialViewController() as! DetailViewController
-        
-        //
+
+        // 上記で作成したインスタンスにデータを引き渡す
         let food = foodList[indexPath.row]
         controller.setTargetFood(food)
-        
-        //
+
+        // 画面遷移を実行する際にUINavigationControllerDelegateの処理が実行される
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }
