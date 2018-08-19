@@ -22,6 +22,8 @@
 		DE14A4B82128D82A000C2F3D /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14A4B72128D82A000C2F3D /* IntExtension.swift */; };
 		DE14A4BA2128F2FF000C2F3D /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14A4B92128F2FF000C2F3D /* TravelModel.swift */; };
 		DE14A4BC2128F54D000C2F3D /* TravelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14A4BB2128F54D000C2F3D /* TravelPresenter.swift */; };
+		DE14A4C121295512000C2F3D /* Photo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE14A4C021295512000C2F3D /* Photo.storyboard */; };
+		DE14A4C321295564000C2F3D /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14A4C221295564000C2F3D /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		DE14A4B72128D82A000C2F3D /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		DE14A4B92128F2FF000C2F3D /* TravelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
 		DE14A4BB2128F54D000C2F3D /* TravelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPresenter.swift; sourceTree = "<group>"; };
+		DE14A4C021295512000C2F3D /* Photo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photo.storyboard; sourceTree = "<group>"; };
+		DE14A4C221295564000C2F3D /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				DE14A476212807F0000C2F3D /* MainViewController.swift */,
+				DE14A4C221295564000C2F3D /* PhotoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -190,8 +195,9 @@
 		DE14A4A7212808E7000C2F3D /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				DE14A478212807F0000C2F3D /* Main.storyboard */,
 				DE14A47D212807F2000C2F3D /* LaunchScreen.storyboard */,
+				DE14A478212807F0000C2F3D /* Main.storyboard */,
+				DE14A4C021295512000C2F3D /* Photo.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -311,6 +317,7 @@
 			files = (
 				DE14A47F212807F2000C2F3D /* LaunchScreen.storyboard in Resources */,
 				DE14A4AE2128AC84000C2F3D /* ItemCardView.xib in Resources */,
+				DE14A4C121295512000C2F3D /* Photo.storyboard in Resources */,
 				DE14A47C212807F2000C2F3D /* Assets.xcassets in Resources */,
 				DE14A47A212807F0000C2F3D /* Main.storyboard in Resources */,
 			);
@@ -346,6 +353,7 @@
 				DE14A4B02128ADD0000C2F3D /* UIColorExtension.swift in Sources */,
 				DE14A4A92128A714000C2F3D /* CustomViewBase.swift in Sources */,
 				DE14A475212807EF000C2F3D /* AppDelegate.swift in Sources */,
+				DE14A4C321295564000C2F3D /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

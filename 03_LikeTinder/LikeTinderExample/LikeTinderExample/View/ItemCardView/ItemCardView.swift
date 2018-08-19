@@ -14,21 +14,22 @@ import UIKit
 protocol ItemCardDelegate: NSObjectProtocol {
 
     // ドラッグ開始時に実行されるアクション
-    func beganDragging(_ itemCardView: ItemCardView)
+    func beganDragging()
 
     // 位置の変化が生じた際に実行されるアクション
     func updatePosition(_ itemCardView: ItemCardView, centerX: CGFloat, centerY: CGFloat)
 
     // 左側へのスワイプ動作が完了した場合に実行されるアクション
-    func swipedLeftPosition(_ itemCardView: ItemCardView)
+    func swipedLeftPosition()
 
     // 右側へのスワイプ動作が完了した場合に実行されるアクション
-    func swipedRightPosition(_ itemCardView: ItemCardView)
+    func swipedRightPosition()
 
     // 元の位置に戻る動作が完了したに実行されるアクション
-    func returnToOriginalPosition(_ itemCardView: ItemCardView)
+    func returnToOriginalPosition()
 }
 
+// MEMO: ItemCardView.xib内の「Use Safe Area Layout Guides」のチェックを外しておく
 class ItemCardView: CustomViewBase {
 
     weak var delegate: ItemCardDelegate?
@@ -66,15 +67,11 @@ class ItemCardView: CustomViewBase {
 
     // Presenterから取得したデータを反映させるUI部品
     @IBOutlet weak private var titleLabel: UILabel!
-    @IBOutlet weak private var thumbnailImage: UIImageView!
+    @IBOutlet weak private var thumbnailImageView: UIImageView!
     @IBOutlet weak private var publishedLabel: UILabel!
     @IBOutlet weak private var accessLabel: UILabel!
     @IBOutlet weak private var budgetLabel: UILabel!
     @IBOutlet weak private var messageLabel: UILabel!
-
-    // 「OK: ○」と「NG: ×」を表示するためのView
-    @IBOutlet weak private var okMarkView: UIView!
-    @IBOutlet weak private var ngMarkView: UILabel!
 
     // 「拡大画像を見る」ボタン
     @IBOutlet weak private var largeImageButton: UIButton!
@@ -88,6 +85,18 @@ class ItemCardView: CustomViewBase {
     }
     
     // MARK: - Function
+
+    func setModelData(_ travel: TravelModel) {
+        thumbnailImageView.image         = travel.image
+        thumbnailImageView.contentMode   = .scaleAspectFill
+        thumbnailImageView.clipsToBounds = true
+
+        titleLabel.text          = travel.title
+        publishedLabel.text      = travel.published
+        accessLabel.text         = travel.access
+        budgetLabel.text         = travel.budget
+        messageLabel.text        = travel.message
+    }
 
     // MARK: - Private Function
 
@@ -116,15 +125,15 @@ class ItemCardView: CustomViewBase {
             )
 
             // ItemCardDelegateのbeganDraggingを実行する
-            self.delegate?.beganDragging(self)
+            self.delegate?.beganDragging()
 
             // Debug.
-            print("beganCenterX:", originalPoint.x)
-            print("beganCenterY:", originalPoint.y)
+            //print("beganCenterX:", originalPoint.x)
+            //print("beganCenterY:", originalPoint.y)
 
             // ドラッグ処理開始時のViewのアルファ値を変更する
             UIView.animate(withDuration: 0.26, delay: 0.0, options: [.curveEaseInOut], animations: {
-                self.alpha = 0.98
+                self.alpha = 0.96
             }, completion: nil)
 
             break
@@ -149,12 +158,12 @@ class ItemCardView: CustomViewBase {
             currentMoveYPercentFromCenter = min(yPositionFromCenter / UIScreen.main.bounds.size.height, 1)
 
             // Debug.
-            print("currentMoveXPercentFromCenter:", currentMoveXPercentFromCenter)
-            print("currentMoveYPercentFromCenter:", currentMoveYPercentFromCenter)
+            //print("currentMoveXPercentFromCenter:", currentMoveXPercentFromCenter)
+            //print("currentMoveYPercentFromCenter:", currentMoveYPercentFromCenter)
 
             // 上記で算出したX軸方向の移動割合から回転量を取得し、初期配置時の回転量へ加算した値でアファイン変換を適用する
             let initialRotationAngle = atan2(initialTransform.b, initialTransform.a)
-            let whenDraggingRotationAngel = initialRotationAngle + CGFloat.pi / 10 * currentMoveXPercentFromCenter
+            let whenDraggingRotationAngel = initialRotationAngle + CGFloat.pi / 14 * currentMoveXPercentFromCenter
             let transforms = CGAffineTransform(rotationAngle: whenDraggingRotationAngel)
 
             // 拡大縮小比を適用する
@@ -170,11 +179,11 @@ class ItemCardView: CustomViewBase {
             let whenEndedVelocity = sender.velocity(in: self)
 
             // Debug.
-            print("whenEndedVelocity:", whenEndedVelocity)
+            //print("whenEndedVelocity:", whenEndedVelocity)
 
             // 移動割合のしきい値を超えていた場合には、画面外へ流れていくようにする（しきい値の範囲内の場合は元に戻る）
-            let shouldMoveToLeft  = (currentMoveXPercentFromCenter < -0.54 && abs(currentMoveYPercentFromCenter) > 0.12)
-            let shouldMoveToRight = (currentMoveXPercentFromCenter > 0.54 && abs(currentMoveYPercentFromCenter) > 0.12)
+            let shouldMoveToLeft  = (currentMoveXPercentFromCenter < -0.38)
+            let shouldMoveToRight = (currentMoveXPercentFromCenter > 0.38)
 
             if shouldMoveToLeft {
                 moveInvisiblePosition(verocity: whenEndedVelocity, isLeft: true)
@@ -215,7 +224,7 @@ class ItemCardView: CustomViewBase {
         self.layer.shadowOpacity = 0.50
         self.layer.shadowOffset  = CGSize(width: 0.75, height: 1.75)
         self.layer.shadowColor   = UIColor(code: "#dddddd").cgColor
-
+        
         // このViewの「拡大画像を見る」ボタンに対する初期設定を行う
         largeImageButton.addTarget(self, action: #selector(self.largeImageButtonTapped), for: .touchUpInside)
 
@@ -228,8 +237,8 @@ class ItemCardView: CustomViewBase {
     private func setupSlopeAndIntercept() {
 
         // 中心位置のゆらぎを表現する値を設定する
-        let fluctuationsPosX: CGFloat = CGFloat(Int.createRandom(range: Range(-8...8)))
-        let fluctuationsPosY: CGFloat = CGFloat(Int.createRandom(range: Range(-8...8)))
+        let fluctuationsPosX: CGFloat = CGFloat(Int.createRandom(range: Range(-12...12)))
+        let fluctuationsPosY: CGFloat = CGFloat(Int.createRandom(range: Range(-12...12)))
 
         // 基準となる中心点のX座標を設定する（デフォルトではデバイスの中心点）
         let initialCenterPosX: CGFloat = UIScreen.main.bounds.size.width / 2
@@ -289,8 +298,7 @@ class ItemCardView: CustomViewBase {
         }, completion: nil)
         
         // ItemCardDelegateのreturnToOriginalPositionを実行する
-        self.delegate?.returnToOriginalPosition(self)
-        
+        self.delegate?.returnToOriginalPosition()
     }
 
     // このViewを左側ないしは右側の領域外へ動かす
@@ -313,7 +321,7 @@ class ItemCardView: CustomViewBase {
         }, completion: { _ in
 
             // ItemCardDelegateのswipedLeftPositionを実行する
-            let _ = isLeft ? self.delegate?.swipedLeftPosition(self) : self.delegate?.swipedRightPosition(self)
+            let _ = isLeft ? self.delegate?.swipedLeftPosition() : self.delegate?.swipedRightPosition()
 
             // 画面から該当のViewを削除する
             self.removeFromSuperview()

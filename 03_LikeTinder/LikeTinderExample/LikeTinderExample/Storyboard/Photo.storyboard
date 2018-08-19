@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3XW-2K-c9n">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo View Controller-->
+        <scene sceneID="3EM-yc-86u">
+            <objects>
+                <viewController id="3XW-2K-c9n" customClass="PhotoViewController" customModule="LikeTinderExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9y0-eP-YJh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.85999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uf6-Ip-TCn" userLabel="背景用View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqF-Om-ibH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_sample" translatesAutoresizingMaskIntoConstraints="NO" id="QwT-FK-tJn">
+                                        <rect key="frame" x="0.0" y="0.0" width="1440" height="960"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QwT-FK-tJn" firstAttribute="top" secondItem="wqF-Om-ibH" secondAttribute="top" id="4Ql-sT-RYr"/>
+                                    <constraint firstAttribute="bottom" secondItem="QwT-FK-tJn" secondAttribute="bottom" id="KTb-Wn-18u"/>
+                                    <constraint firstAttribute="trailing" secondItem="QwT-FK-tJn" secondAttribute="trailing" id="k1n-Sk-3Cz"/>
+                                    <constraint firstItem="QwT-FK-tJn" firstAttribute="leading" secondItem="wqF-Om-ibH" secondAttribute="leading" id="wX8-PZ-l7B"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2p-NS-Md6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLK-Dc-Xzl">
+                                        <rect key="frame" x="12" y="7" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="4gx-lY-Wr8"/>
+                                            <constraint firstAttribute="height" constant="30" id="jHg-z2-SQ7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                                        <state key="normal" title="× 閉じる">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトルが入ります" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bi6-QK-VxN">
+                                        <rect key="frame" x="260" y="16.5" width="99" height="11"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zLK-Dc-Xzl" firstAttribute="centerY" secondItem="S2p-NS-Md6" secondAttribute="centerY" id="2Y3-QX-Y5g"/>
+                                    <constraint firstItem="zLK-Dc-Xzl" firstAttribute="leading" secondItem="S2p-NS-Md6" secondAttribute="leading" constant="12" id="7dU-sc-O8w"/>
+                                    <constraint firstItem="Bi6-QK-VxN" firstAttribute="centerY" secondItem="S2p-NS-Md6" secondAttribute="centerY" id="TkV-bJ-G2q"/>
+                                    <constraint firstAttribute="height" constant="44" id="g8E-DX-n4Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bi6-QK-VxN" secondAttribute="trailing" constant="16" id="sM5-H3-mz1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="S2p-NS-Md6" firstAttribute="leading" secondItem="9y0-eP-YJh" secondAttribute="leading" id="4zB-kt-JEV"/>
+                            <constraint firstItem="Uf6-Ip-TCn" firstAttribute="leading" secondItem="9y0-eP-YJh" secondAttribute="leading" id="DhX-0m-HW0"/>
+                            <constraint firstItem="Uf6-Ip-TCn" firstAttribute="bottom" secondItem="9y0-eP-YJh" secondAttribute="bottom" id="LhW-Dd-nbO"/>
+                            <constraint firstItem="wqF-Om-ibH" firstAttribute="top" secondItem="9y0-eP-YJh" secondAttribute="top" id="NOy-b6-1po"/>
+                            <constraint firstItem="S2p-NS-Md6" firstAttribute="top" secondItem="Nn0-do-L8h" secondAttribute="top" id="P1P-9c-GM4"/>
+                            <constraint firstItem="wqF-Om-ibH" firstAttribute="trailing" secondItem="9y0-eP-YJh" secondAttribute="trailing" id="X3Q-B4-8oQ"/>
+                            <constraint firstItem="Uf6-Ip-TCn" firstAttribute="top" secondItem="9y0-eP-YJh" secondAttribute="top" id="doi-fY-DHR"/>
+                            <constraint firstItem="wqF-Om-ibH" firstAttribute="leading" secondItem="9y0-eP-YJh" secondAttribute="leading" id="ebX-nk-tfr"/>
+                            <constraint firstItem="wqF-Om-ibH" firstAttribute="bottom" secondItem="9y0-eP-YJh" secondAttribute="bottom" id="n3R-d4-eel"/>
+                            <constraint firstItem="S2p-NS-Md6" firstAttribute="trailing" secondItem="9y0-eP-YJh" secondAttribute="trailing" id="u9K-tr-vVq"/>
+                            <constraint firstItem="Uf6-Ip-TCn" firstAttribute="trailing" secondItem="9y0-eP-YJh" secondAttribute="trailing" id="y8h-TF-hDN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nn0-do-L8h"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoCloseButton" destination="zLK-Dc-Xzl" id="wAm-QH-92D"/>
+                        <outlet property="photoHeaderView" destination="S2p-NS-Md6" id="SOx-1s-el8"/>
+                        <outlet property="photoImageView" destination="QwT-FK-tJn" id="W6D-Z4-9a7"/>
+                        <outlet property="photoImageViewBottomConstraint" destination="KTb-Wn-18u" id="zDb-Rw-ruq"/>
+                        <outlet property="photoImageViewLeftConstraint" destination="wX8-PZ-l7B" id="Tdo-nd-dAt"/>
+                        <outlet property="photoImageViewRightConstraint" destination="k1n-Sk-3Cz" id="cFj-sD-Eg9"/>
+                        <outlet property="photoImageViewTopConstraint" destination="4Ql-sT-RYr" id="8fM-dx-bHD"/>
+                        <outlet property="photoScrollView" destination="wqF-Om-ibH" id="DYV-Hc-TO1"/>
+                        <outlet property="photoTitleLabel" destination="Bi6-QK-VxN" id="Hzr-OB-UDS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQZ-ri-Lcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288.80000000000001" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo_sample" width="1440" height="960"/>
+    </resources>
+</document>
