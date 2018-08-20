@@ -310,7 +310,7 @@ class ItemCardView: CustomViewBase {
         let endCenterPosY = verocity.y
         let endCenterPosition = CGPoint(x: endCenterPosX, y: endCenterPosY)
 
-        UIView.animate(withDuration: 0.48, delay: 0.0, usingSpringWithDamping: 0.68, initialSpringVelocity: 0.0, options: [.curveEaseInOut], animations: {
+        UIView.animate(withDuration: 0.36, delay: 0.0, usingSpringWithDamping: 0.68, initialSpringVelocity: 0.0, options: [.curveEaseInOut], animations: {
 
             // ドラッグ処理終了時はViewのアルファ値を元に戻す
             self.alpha = 1.00
