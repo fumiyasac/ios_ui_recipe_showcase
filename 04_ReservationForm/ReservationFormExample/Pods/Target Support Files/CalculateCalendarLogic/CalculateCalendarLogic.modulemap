@@ -1,0 +1,6 @@
+framework module CalculateCalendarLogic {
+  umbrella header "CalculateCalendarLogic-umbrella.h"
+
+  export *
+  module * { export * }
+}

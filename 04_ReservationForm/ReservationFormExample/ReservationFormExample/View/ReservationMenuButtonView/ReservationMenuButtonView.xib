@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReservationMenuButtonView" customModule="ReservationFormExample" customModuleProvider="target">
+            <connections>
+                <outlet property="iconImageView" destination="Cbp-fT-99K" id="mC0-TZ-yXi"/>
+                <outlet property="menuButton" destination="yj5-lj-4zI" id="WcC-hK-sd1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNf-Lf-efW">
+                    <rect key="frame" x="130.5" y="12" width="114" height="24"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cbp-fT-99K">
+                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="eyw-QC-KzS"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メニューを開く" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxx-39-Z8V">
+                            <rect key="frame" x="30" y="6" width="84" height="12"/>
+                            <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="4eN-5p-9XP"/>
+                        <constraint firstItem="Cbp-fT-99K" firstAttribute="leading" secondItem="SNf-Lf-efW" secondAttribute="leading" id="54D-o0-yiX"/>
+                        <constraint firstAttribute="width" constant="114" id="5aa-vT-Alz"/>
+                        <constraint firstItem="pxx-39-Z8V" firstAttribute="leading" secondItem="Cbp-fT-99K" secondAttribute="trailing" constant="6" id="8zk-uN-qhk"/>
+                        <constraint firstAttribute="trailing" secondItem="pxx-39-Z8V" secondAttribute="trailing" id="UcL-UE-RhG"/>
+                        <constraint firstItem="Cbp-fT-99K" firstAttribute="top" secondItem="SNf-Lf-efW" secondAttribute="top" id="WZI-QG-bJq"/>
+                        <constraint firstItem="pxx-39-Z8V" firstAttribute="centerY" secondItem="SNf-Lf-efW" secondAttribute="centerY" id="YZO-dM-bgV"/>
+                        <constraint firstAttribute="bottom" secondItem="Cbp-fT-99K" secondAttribute="bottom" id="aLX-b3-dr5"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj5-lj-4zI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.42745098039215684" green="0.70980392156862748" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SNf-Lf-efW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8WM-Nw-HhG"/>
+                <constraint firstItem="yj5-lj-4zI" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="W79-Qq-oHb"/>
+                <constraint firstItem="yj5-lj-4zI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fJe-n9-eRg"/>
+                <constraint firstItem="yj5-lj-4zI" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gPY-rt-RJy"/>
+                <constraint firstItem="SNf-Lf-efW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mdy-gs-hUS"/>
+                <constraint firstItem="yj5-lj-4zI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vve-Tx-koC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="54"/>
+        </view>
+    </objects>
+</document>

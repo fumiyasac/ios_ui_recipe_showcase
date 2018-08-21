@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReservationMenuContentsView" customModule="ReservationFormExample" customModuleProvider="target">
+            <connections>
+                <outlet property="addReservationButton" destination="Ekq-s8-Tgt" id="H1K-wh-YZX"/>
+                <outlet property="showGithubButton" destination="Qte-bG-Ryo" id="Ny7-Ni-aqZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="このサンプルへようこそ :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxY-dw-4K3">
+                    <rect key="frame" x="16" y="20" width="228" height="13"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmx-Xx-Cv2">
+                    <rect key="frame" x="16" y="41" width="228" height="29"/>
+                    <attributedString key="attributedText">
+                        <fragment content="操作できることは新規追加とGithubページへの遷移になります。">
+                            <attributes>
+                                <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="HiraginoSans-W3"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rDU-zU-tzx">
+                    <rect key="frame" x="10" y="80" width="240" height="90"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoA-7K-pEE">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="45"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▶︎ 新しくデータを追加する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc6-6b-07P">
+                                    <rect key="frame" x="8" y="16.5" width="224" height="12"/>
+                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="12"/>
+                                    <color key="textColor" red="0.26666666666666666" green="0.68235294117647061" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekq-s8-Tgt">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="45"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Ekq-s8-Tgt" firstAttribute="leading" secondItem="XoA-7K-pEE" secondAttribute="leading" id="3g5-Ef-dUD"/>
+                                <constraint firstAttribute="bottom" secondItem="Ekq-s8-Tgt" secondAttribute="bottom" id="HL7-dz-g9O"/>
+                                <constraint firstItem="qc6-6b-07P" firstAttribute="leading" secondItem="XoA-7K-pEE" secondAttribute="leading" constant="8" id="aUx-WT-LTP"/>
+                                <constraint firstAttribute="trailing" secondItem="qc6-6b-07P" secondAttribute="trailing" constant="8" id="dYk-oa-T8s"/>
+                                <constraint firstItem="Ekq-s8-Tgt" firstAttribute="top" secondItem="XoA-7K-pEE" secondAttribute="top" id="hsc-4D-dJg"/>
+                                <constraint firstItem="qc6-6b-07P" firstAttribute="centerY" secondItem="XoA-7K-pEE" secondAttribute="centerY" id="sF3-5e-zgW"/>
+                                <constraint firstAttribute="trailing" secondItem="Ekq-s8-Tgt" secondAttribute="trailing" id="u4c-gC-4Qw"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jc2-4b-FuU">
+                            <rect key="frame" x="0.0" y="45" width="240" height="45"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▶︎ Githubページでコードを見る" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOr-1J-oVJ">
+                                    <rect key="frame" x="8" y="16.5" width="224" height="12"/>
+                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="12"/>
+                                    <color key="textColor" red="0.2666666667" green="0.68235294120000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qte-bG-Ryo">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="45"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Qte-bG-Ryo" secondAttribute="trailing" id="6xs-mu-lPy"/>
+                                <constraint firstItem="Qte-bG-Ryo" firstAttribute="leading" secondItem="jc2-4b-FuU" secondAttribute="leading" id="EZ8-tu-Aj9"/>
+                                <constraint firstAttribute="bottom" secondItem="Qte-bG-Ryo" secondAttribute="bottom" id="Gha-Bb-uRQ"/>
+                                <constraint firstItem="FOr-1J-oVJ" firstAttribute="centerY" secondItem="jc2-4b-FuU" secondAttribute="centerY" id="I6O-gV-G3w"/>
+                                <constraint firstAttribute="trailing" secondItem="FOr-1J-oVJ" secondAttribute="trailing" constant="8" id="ey4-AX-qfe"/>
+                                <constraint firstItem="Qte-bG-Ryo" firstAttribute="top" secondItem="jc2-4b-FuU" secondAttribute="top" id="yrU-qa-64b"/>
+                                <constraint firstItem="FOr-1J-oVJ" firstAttribute="leading" secondItem="jc2-4b-FuU" secondAttribute="leading" constant="8" id="z79-CQ-Ksd"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="IZN-zX-x7X"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vmx-Xx-Cv2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="4a0-X4-o89"/>
+                <constraint firstItem="rDU-zU-tzx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="4bT-4k-ZVQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BxY-dw-4K3" secondAttribute="trailing" constant="16" id="EBG-lA-5nE"/>
+                <constraint firstItem="Vmx-Xx-Cv2" firstAttribute="top" secondItem="BxY-dw-4K3" secondAttribute="bottom" constant="8" id="LgV-IA-5cc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rDU-zU-tzx" secondAttribute="bottom" constant="10" id="M9v-98-6c2"/>
+                <constraint firstItem="BxY-dw-4K3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="QhW-8G-eoN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vmx-Xx-Cv2" secondAttribute="trailing" constant="16" id="gf0-KZ-emz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rDU-zU-tzx" secondAttribute="trailing" constant="10" id="iQj-rb-S9a"/>
+                <constraint firstItem="rDU-zU-tzx" firstAttribute="top" secondItem="Vmx-Xx-Cv2" secondAttribute="bottom" constant="10" id="xbR-hE-WSe"/>
+                <constraint firstItem="BxY-dw-4K3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="xsf-XM-YH0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>
