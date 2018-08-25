@@ -1,38 +1,24 @@
 PODS:
-  - CalculateCalendarLogic (0.2.0)
   - FontAwesome.swift (1.4.3)
   - KYNavigationProgress (2.0.2)
   - Popover (1.2.0)
-  - Realm (3.7.6):
-    - Realm/Headers (= 3.7.6)
-  - Realm/Headers (3.7.6)
-  - RealmSwift (3.7.6):
-    - Realm (= 3.7.6)
 
 DEPENDENCIES:
-  - CalculateCalendarLogic
   - FontAwesome.swift
   - KYNavigationProgress
   - Popover
-  - RealmSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - CalculateCalendarLogic
     - FontAwesome.swift
     - KYNavigationProgress
     - Popover
-    - Realm
-    - RealmSwift
 
 SPEC CHECKSUMS:
-  CalculateCalendarLogic: d7b6bf4ed6c0c21937efb7323c67d09cdb12a1ad
   FontAwesome.swift: 4b9ba1e1f3418a626f3ab67b230856ab6eb4860f
   KYNavigationProgress: a380f5016e898ea4577049cf7b41895ed2a8da5a
   Popover: 28c1ac8e937ab2b3965bd2da7dd18324357abc41
-  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
-  RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
 
-PODFILE CHECKSUM: 0597b9804b7e17be6b1f11a4523737a6ecf99042
+PODFILE CHECKSUM: 8be9e7131a4926badedb5c4fced785ee597d5372
 
 COCOAPODS: 1.5.3

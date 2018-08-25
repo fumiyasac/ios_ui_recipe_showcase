@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CD72CF56D26E92AFF4197C98 /* Pods_ReservationFormExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B99EDFD7435A51B734521F /* Pods_ReservationFormExample.framework */; };
+		DE955124212EC78F00E57328 /* FormSelectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE955122212EC78F00E57328 /* FormSelectTableViewCell.swift */; };
+		DE955125212EC78F00E57328 /* FormSelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE955123212EC78F00E57328 /* FormSelectTableViewCell.xib */; };
 		DEC8DDFE212AD751000AC63F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DDFD212AD751000AC63F /* AppDelegate.swift */; };
 		DEC8DE00212AD751000AC63F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DDFF212AD751000AC63F /* MainViewController.swift */; };
 		DEC8DE03212AD751000AC63F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC8DE01212AD751000AC63F /* Main.storyboard */; };
@@ -30,6 +32,18 @@
 		DEC8DE50212C1C32000AC63F /* DeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE4F212C1C32000AC63F /* DeviceSize.swift */; };
 		DEC8DE54212C3003000AC63F /* FormDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE53212C3003000AC63F /* FormDataStore.swift */; };
 		DEC8DE57212C3263000AC63F /* FormContents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC8DE55212C3263000AC63F /* FormContents.storyboard */; };
+		DEC8DE5A212CD34F000AC63F /* FormContentsFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE59212CD34F000AC63F /* FormContentsFirstViewController.swift */; };
+		DEC8DE5C212CD360000AC63F /* FormContentsSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE5B212CD360000AC63F /* FormContentsSecondViewController.swift */; };
+		DEC8DE5E212CD3AB000AC63F /* FormContentsThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE5D212CD3AB000AC63F /* FormContentsThirdViewController.swift */; };
+		DEC8DE63212D676C000AC63F /* FormInputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE62212D676C000AC63F /* FormInputTextFieldView.swift */; };
+		DEC8DE65212D677E000AC63F /* FormInputTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC8DE64212D677E000AC63F /* FormInputTextFieldView.xib */; };
+		DEC8DE67212D686C000AC63F /* FormSelectTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC8DE66212D686C000AC63F /* FormSelectTableView.xib */; };
+		DEC8DE69212D6883000AC63F /* FormSelectTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE68212D6883000AC63F /* FormSelectTableView.swift */; };
+		DEC8DE6D212D691F000AC63F /* FormInputSwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC8DE6C212D691F000AC63F /* FormInputSwitchView.xib */; };
+		DEC8DE6F212D692B000AC63F /* FormInputSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE6E212D692B000AC63F /* FormInputSwitchView.swift */; };
+		DEC8DE71212D694C000AC63F /* FormInputCounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC8DE70212D694C000AC63F /* FormInputCounterView.xib */; };
+		DEC8DE73212D695D000AC63F /* FormInputCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE72212D695D000AC63F /* FormInputCounterView.swift */; };
+		DEEE3540212E5E270060A49B /* FormTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE353F212E5E270060A49B /* FormTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +67,8 @@
 		148A14FDC5E639FFE615A844 /* Pods-ReservationFormExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReservationFormExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReservationFormExample/Pods-ReservationFormExample.debug.xcconfig"; sourceTree = "<group>"; };
 		16B99EDFD7435A51B734521F /* Pods_ReservationFormExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReservationFormExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4000D73CDB9E9F762FE4C528 /* Pods-ReservationFormExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReservationFormExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReservationFormExample/Pods-ReservationFormExample.release.xcconfig"; sourceTree = "<group>"; };
+		DE955122212EC78F00E57328 /* FormSelectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSelectTableViewCell.swift; sourceTree = "<group>"; };
+		DE955123212EC78F00E57328 /* FormSelectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormSelectTableViewCell.xib; sourceTree = "<group>"; };
 		DEC8DDFA212AD751000AC63F /* ReservationFormExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReservationFormExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC8DDFD212AD751000AC63F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC8DDFF212AD751000AC63F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +97,18 @@
 		DEC8DE4F212C1C32000AC63F /* DeviceSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSize.swift; sourceTree = "<group>"; };
 		DEC8DE53212C3003000AC63F /* FormDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDataStore.swift; sourceTree = "<group>"; };
 		DEC8DE56212C3263000AC63F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FormContents.storyboard; sourceTree = "<group>"; };
+		DEC8DE59212CD34F000AC63F /* FormContentsFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContentsFirstViewController.swift; sourceTree = "<group>"; };
+		DEC8DE5B212CD360000AC63F /* FormContentsSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContentsSecondViewController.swift; sourceTree = "<group>"; };
+		DEC8DE5D212CD3AB000AC63F /* FormContentsThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContentsThirdViewController.swift; sourceTree = "<group>"; };
+		DEC8DE62212D676C000AC63F /* FormInputTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInputTextFieldView.swift; sourceTree = "<group>"; };
+		DEC8DE64212D677E000AC63F /* FormInputTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormInputTextFieldView.xib; sourceTree = "<group>"; };
+		DEC8DE66212D686C000AC63F /* FormSelectTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormSelectTableView.xib; sourceTree = "<group>"; };
+		DEC8DE68212D6883000AC63F /* FormSelectTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSelectTableView.swift; sourceTree = "<group>"; };
+		DEC8DE6C212D691F000AC63F /* FormInputSwitchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormInputSwitchView.xib; sourceTree = "<group>"; };
+		DEC8DE6E212D692B000AC63F /* FormInputSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInputSwitchView.swift; sourceTree = "<group>"; };
+		DEC8DE70212D694C000AC63F /* FormInputCounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormInputCounterView.xib; sourceTree = "<group>"; };
+		DEC8DE72212D695D000AC63F /* FormInputCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInputCounterView.swift; sourceTree = "<group>"; };
+		DEEE353F212E5E270060A49B /* FormTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +182,7 @@
 				DEC8DE09212AD755000AC63F /* Info.plist */,
 				DEC8DDFD212AD751000AC63F /* AppDelegate.swift */,
 				DEC8DE04212AD755000AC63F /* Assets.xcassets */,
-				DEC8DE30212AD8F1000AC63F /* Entity */,
+				DEC8DE30212AD8F1000AC63F /* Enum */,
 				DEC8DE2F212AD7E9000AC63F /* Extension */,
 				DEC8DE2D212AD778000AC63F /* Model */,
 				DEC8DE31212AD95F000AC63F /* Module */,
@@ -197,6 +225,7 @@
 		DEC8DE2C212AD76F000AC63F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DEC8DE58212CC5BB000AC63F /* FormContents */,
 				DEC8DE52212C2EDA000AC63F /* Form */,
 				DEC8DE51212C2EC5000AC63F /* Main */,
 			);
@@ -214,6 +243,11 @@
 			isa = PBXGroup;
 			children = (
 				DEC8DE37212AFFE2000AC63F /* CustomViewBase.swift */,
+				DEC8DE6B212D68EC000AC63F /* FormInputCounterView */,
+				DEC8DE61212D2197000AC63F /* FormSelectTableView */,
+				DEEE3541212E7F0F0060A49B /* FormSelectTableViewCell */,
+				DEC8DE6A212D6898000AC63F /* FormInputSwitchView */,
+				DEC8DE5F212D2113000AC63F /* FormInputTextFieldView */,
 				DEC8DE43212B7E3D000AC63F /* ReservationMenuButtonView */,
 				DEC8DE48212BAFA1000AC63F /* ReservationMenuContentsView */,
 			);
@@ -232,11 +266,12 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		DEC8DE30212AD8F1000AC63F /* Entity */ = {
+		DEC8DE30212AD8F1000AC63F /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				DEEE353F212E5E270060A49B /* FormTypes.swift */,
 			);
-			path = Entity;
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		DEC8DE31212AD95F000AC63F /* Module */ = {
@@ -280,6 +315,61 @@
 				DEC8DE35212AE59E000AC63F /* FormViewController.swift */,
 			);
 			path = Form;
+			sourceTree = "<group>";
+		};
+		DEC8DE58212CC5BB000AC63F /* FormContents */ = {
+			isa = PBXGroup;
+			children = (
+				DEC8DE59212CD34F000AC63F /* FormContentsFirstViewController.swift */,
+				DEC8DE5B212CD360000AC63F /* FormContentsSecondViewController.swift */,
+				DEC8DE5D212CD3AB000AC63F /* FormContentsThirdViewController.swift */,
+			);
+			path = FormContents;
+			sourceTree = "<group>";
+		};
+		DEC8DE5F212D2113000AC63F /* FormInputTextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				DEC8DE62212D676C000AC63F /* FormInputTextFieldView.swift */,
+				DEC8DE64212D677E000AC63F /* FormInputTextFieldView.xib */,
+			);
+			path = FormInputTextFieldView;
+			sourceTree = "<group>";
+		};
+		DEC8DE61212D2197000AC63F /* FormSelectTableView */ = {
+			isa = PBXGroup;
+			children = (
+				DEC8DE68212D6883000AC63F /* FormSelectTableView.swift */,
+				DEC8DE66212D686C000AC63F /* FormSelectTableView.xib */,
+			);
+			path = FormSelectTableView;
+			sourceTree = "<group>";
+		};
+		DEC8DE6A212D6898000AC63F /* FormInputSwitchView */ = {
+			isa = PBXGroup;
+			children = (
+				DEC8DE6E212D692B000AC63F /* FormInputSwitchView.swift */,
+				DEC8DE6C212D691F000AC63F /* FormInputSwitchView.xib */,
+			);
+			path = FormInputSwitchView;
+			sourceTree = "<group>";
+		};
+		DEC8DE6B212D68EC000AC63F /* FormInputCounterView */ = {
+			isa = PBXGroup;
+			children = (
+				DEC8DE72212D695D000AC63F /* FormInputCounterView.swift */,
+				DEC8DE70212D694C000AC63F /* FormInputCounterView.xib */,
+			);
+			path = FormInputCounterView;
+			sourceTree = "<group>";
+		};
+		DEEE3541212E7F0F0060A49B /* FormSelectTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE955122212EC78F00E57328 /* FormSelectTableViewCell.swift */,
+				DE955123212EC78F00E57328 /* FormSelectTableViewCell.xib */,
+			);
+			path = FormSelectTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,12 +479,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEC8DE08212AD755000AC63F /* LaunchScreen.storyboard in Resources */,
+				DEC8DE6D212D691F000AC63F /* FormInputSwitchView.xib in Resources */,
 				DEC8DE45212B7E59000AC63F /* ReservationMenuButtonView.xib in Resources */,
 				DEC8DE05212AD755000AC63F /* Assets.xcassets in Resources */,
+				DEC8DE67212D686C000AC63F /* FormSelectTableView.xib in Resources */,
+				DEC8DE65212D677E000AC63F /* FormInputTextFieldView.xib in Resources */,
 				DEC8DE34212AE50B000AC63F /* Form.storyboard in Resources */,
 				DEC8DE57212C3263000AC63F /* FormContents.storyboard in Resources */,
+				DE955125212EC78F00E57328 /* FormSelectTableViewCell.xib in Resources */,
 				DEC8DE4E212BD4C3000AC63F /* ReservationMenuContentsView.xib in Resources */,
 				DEC8DE03212AD751000AC63F /* Main.storyboard in Resources */,
+				DEC8DE71212D694C000AC63F /* FormInputCounterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,21 +535,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReservationFormExample/Pods-ReservationFormExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CalculateCalendarLogic/CalculateCalendarLogic.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/KYNavigationProgress/KYNavigationProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/Popover/Popover.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CalculateCalendarLogic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYNavigationProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Popover.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -468,18 +557,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC8DE69212D6883000AC63F /* FormSelectTableView.swift in Sources */,
+				DEC8DE63212D676C000AC63F /* FormInputTextFieldView.swift in Sources */,
+				DEC8DE6F212D692B000AC63F /* FormInputSwitchView.swift in Sources */,
 				DEC8DE38212AFFE2000AC63F /* CustomViewBase.swift in Sources */,
 				DEC8DE4A212BD474000AC63F /* ReservationMenuContentsView.swift in Sources */,
 				DEC8DE50212C1C32000AC63F /* DeviceSize.swift in Sources */,
 				DEC8DE54212C3003000AC63F /* FormDataStore.swift in Sources */,
+				DEC8DE5C212CD360000AC63F /* FormContentsSecondViewController.swift in Sources */,
 				DEC8DE36212AE59E000AC63F /* FormViewController.swift in Sources */,
 				DEC8DE3A212B62D6000AC63F /* UIColorExtension.swift in Sources */,
 				DEC8DE3C212B6312000AC63F /* NSObjectProtocolExtension.swift in Sources */,
 				DEC8DE00212AD751000AC63F /* MainViewController.swift in Sources */,
+				DEC8DE73212D695D000AC63F /* FormInputCounterView.swift in Sources */,
 				DEC8DE3E212B6355000AC63F /* UIViewControllerExtension.swift in Sources */,
+				DEC8DE5A212CD34F000AC63F /* FormContentsFirstViewController.swift in Sources */,
 				DEC8DE47212B7E6B000AC63F /* ReservationMenuButtonView.swift in Sources */,
+				DEC8DE5E212CD3AB000AC63F /* FormContentsThirdViewController.swift in Sources */,
 				DEC8DE42212B73DF000AC63F /* UITableViewExtension.swift in Sources */,
 				DEC8DDFE212AD751000AC63F /* AppDelegate.swift in Sources */,
+				DEEE3540212E5E270060A49B /* FormTypes.swift in Sources */,
+				DE955124212EC78F00E57328 /* FormSelectTableViewCell.swift in Sources */,
 				DEC8DE40212B6FA5000AC63F /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,10 +771,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = ReservationFormExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.ReservationFormExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -692,10 +787,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = ReservationFormExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.ReservationFormExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -711,11 +803,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = ReservationFormExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.ReservationFormExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -732,11 +820,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = ReservationFormExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.ReservationFormExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -752,11 +836,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = ReservationFormExampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.ReservationFormExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -772,11 +852,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = ReservationFormExampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.ReservationFormExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

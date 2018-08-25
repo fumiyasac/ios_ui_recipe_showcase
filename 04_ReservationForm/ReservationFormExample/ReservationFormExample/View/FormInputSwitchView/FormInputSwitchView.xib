@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormInputSwitchView" customModule="ReservationFormExample" customModuleProvider="target">
+            <connections>
+                <outlet property="inputSwitch" destination="Uza-KE-hCM" id="pyZ-gu-VSW"/>
+                <outlet property="remarkLabel" destination="gvw-fl-1zx" id="3np-aP-CPm"/>
+                <outlet property="titleLabel" destination="hCc-uB-VWM" id="hJa-92-OXM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="入力項目名:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCc-uB-VWM">
+                    <rect key="frame" x="12" y="21" width="69" height="13"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※任意" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvw-fl-1zx">
+                    <rect key="frame" x="93" y="22" width="35" height="11"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="OP9-dY-Kww"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="11"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uza-KE-hCM">
+                    <rect key="frame" x="314" y="12" width="51" height="31"/>
+                </switch>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZW-j7-LFu" userLabel="下線用View">
+                    <rect key="frame" x="0.0" y="53" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="Rfe-Gl-OJB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Uza-KE-hCM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AT3-bW-K1O"/>
+                <constraint firstItem="gvw-fl-1zx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="P4H-Gu-7l5"/>
+                <constraint firstAttribute="trailing" secondItem="aZW-j7-LFu" secondAttribute="trailing" id="QRc-t4-YRQ"/>
+                <constraint firstItem="hCc-uB-VWM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QYx-72-MMA"/>
+                <constraint firstItem="hCc-uB-VWM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="o0k-2u-Dil"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Uza-KE-hCM" secondAttribute="trailing" constant="12" id="qQI-mP-PIk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aZW-j7-LFu" secondAttribute="bottom" id="tp1-wd-2eb"/>
+                <constraint firstItem="gvw-fl-1zx" firstAttribute="leading" secondItem="hCc-uB-VWM" secondAttribute="trailing" constant="12" id="uAG-op-WgM"/>
+                <constraint firstItem="aZW-j7-LFu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uKA-D8-ruu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="93"/>
+        </view>
+    </objects>
+</document>

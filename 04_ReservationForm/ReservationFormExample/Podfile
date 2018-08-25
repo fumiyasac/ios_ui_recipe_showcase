@@ -6,8 +6,6 @@ target 'ReservationFormExample' do
   use_frameworks!
 
   # Pods for ReservationFormExample
-  pod 'RealmSwift'
-  pod 'CalculateCalendarLogic'
   pod 'KYNavigationProgress'
   pod 'Popover'
   pod 'FontAwesome.swift'

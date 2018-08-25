@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import FontAwesome_swift
 
-@IBDesignable
+//@IBDesignable
 class ReservationMenuButtonView: CustomViewBase {
 
     var menuButtonTappedHandler: (() -> ())?

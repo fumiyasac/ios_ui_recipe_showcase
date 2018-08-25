@@ -6,6 +6,429 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Form Contents First View Controller-->
+        <scene sceneID="74h-DS-0p4">
+            <objects>
+                <viewController storyboardIdentifier="FormContentsFirstViewController" id="hBZ-lD-PfO" customClass="FormContentsFirstViewController" customModule="ReservationFormExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VfV-zZ-70J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFN-ra-eP2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pfP-9S-0iw">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="482"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Arf-Z4-abL">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step1: 参加イベントの選択 (1/3)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0O-dt-MHE">
+                                                        <rect key="frame" x="12" y="14" width="351" height="15"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                        <color key="textColor" red="0.42745098040000001" green="0.70980392160000005" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Q0O-dt-MHE" firstAttribute="centerY" secondItem="Arf-Z4-abL" secondAttribute="centerY" id="8v6-p8-G2h"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Q0O-dt-MHE" secondAttribute="trailing" constant="12" id="JTv-yU-J2F"/>
+                                                    <constraint firstAttribute="height" constant="44" id="Qbx-l7-mGc"/>
+                                                    <constraint firstItem="Q0O-dt-MHE" firstAttribute="leading" secondItem="Arf-Z4-abL" secondAttribute="leading" constant="12" id="gd9-rA-J9U"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orW-oo-nlZ">
+                                                <rect key="frame" x="0.0" y="44" width="375" height="57"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kuw-IH-mfl">
+                                                        <rect key="frame" x="12" y="12" width="351" height="33"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="参加するイベントと参加人数を入力してください。複数人でのご参加の場合は代表者を記載。">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="13" name="HiraginoSans-W3"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Kuw-IH-mfl" firstAttribute="top" secondItem="orW-oo-nlZ" secondAttribute="top" constant="12" id="CX3-AE-PEM"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="Io6-bH-Kos"/>
+                                                    <constraint firstItem="Kuw-IH-mfl" firstAttribute="leading" secondItem="orW-oo-nlZ" secondAttribute="leading" constant="12" id="Vbm-Jc-B9t"/>
+                                                    <constraint firstAttribute="height" priority="250" constant="57" id="Wip-Kh-6Bo"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Kuw-IH-mfl" secondAttribute="bottom" constant="12" id="fwL-zz-psR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Kuw-IH-mfl" secondAttribute="trailing" constant="12" id="zVf-Jm-5dE"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSD-nl-v2b" customClass="FormInputTextFieldView" customModule="ReservationFormExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="101" width="375" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Ofd-Uo-oaH"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOZ-fq-B9n" customClass="FormInputCounterView" customModule="ReservationFormExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="201" width="375" height="106"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="106" id="RrH-fq-bZU"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWI-5g-Whm" customClass="FormSelectTableView" customModule="ReservationFormExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="307" width="375" height="175"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="175" id="so4-df-Kv3"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pfP-9S-0iw" secondAttribute="trailing" id="4rJ-EF-LQ0"/>
+                                    <constraint firstAttribute="bottom" secondItem="pfP-9S-0iw" secondAttribute="bottom" id="FcM-a4-ixd"/>
+                                    <constraint firstItem="pfP-9S-0iw" firstAttribute="top" secondItem="nFN-ra-eP2" secondAttribute="top" id="dDG-La-WYJ"/>
+                                    <constraint firstItem="pfP-9S-0iw" firstAttribute="width" secondItem="nFN-ra-eP2" secondAttribute="width" id="gCs-Ez-1Dm"/>
+                                    <constraint firstItem="pfP-9S-0iw" firstAttribute="leading" secondItem="nFN-ra-eP2" secondAttribute="leading" id="wQ5-2h-sUb"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nFN-ra-eP2" firstAttribute="top" secondItem="VfV-zZ-70J" secondAttribute="top" id="BXE-3A-vrE"/>
+                            <constraint firstItem="nFN-ra-eP2" firstAttribute="bottom" secondItem="N69-qg-eV1" secondAttribute="bottom" id="EcM-ZP-6Fd"/>
+                            <constraint firstItem="nFN-ra-eP2" firstAttribute="leading" secondItem="N69-qg-eV1" secondAttribute="leading" id="H0e-g5-fHe"/>
+                            <constraint firstItem="nFN-ra-eP2" firstAttribute="trailing" secondItem="N69-qg-eV1" secondAttribute="trailing" id="gPp-oL-Eu9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N69-qg-eV1"/>
+                    </view>
+                    <connections>
+                        <outlet property="addTicketView" destination="wOZ-fq-B9n" id="cvj-Fw-p0p"/>
+                        <outlet property="formScrollView" destination="nFN-ra-eP2" id="3Bm-x9-UK7"/>
+                        <outlet property="inputNameView" destination="oSD-nl-v2b" id="TY9-8p-cGh"/>
+                        <outlet property="selectEventView" destination="oWI-5g-Whm" id="neP-yR-i1s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sBB-9a-sVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="163.26836581709148"/>
+        </scene>
+        <!--Form Contents Second View Controller-->
+        <scene sceneID="ZmF-Nd-cMO">
+            <objects>
+                <viewController storyboardIdentifier="FormContentsSecondViewController" id="N13-uD-nf8" customClass="FormContentsSecondViewController" customModule="ReservationFormExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V7J-yh-Wmw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UaZ-mZ-ANY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="osQ-WP-i92">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="481"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nH4-46-5Lm">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step2: 連絡先の入力 (2/3)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aa1-Wl-yyi">
+                                                        <rect key="frame" x="12" y="14" width="351" height="15"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                        <color key="textColor" red="0.42745098040000001" green="0.70980392160000005" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="PYa-K9-Xey"/>
+                                                    <constraint firstItem="aa1-Wl-yyi" firstAttribute="centerY" secondItem="nH4-46-5Lm" secondAttribute="centerY" id="cx5-lD-lXQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="aa1-Wl-yyi" secondAttribute="trailing" constant="12" id="llZ-Yj-GXh"/>
+                                                    <constraint firstItem="aa1-Wl-yyi" firstAttribute="leading" secondItem="nH4-46-5Lm" secondAttribute="leading" constant="12" id="vkc-tc-t4j"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cH7-UF-Lvq">
+                                                <rect key="frame" x="0.0" y="44" width="375" height="57"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LC-Mq-Q0Q">
+                                                        <rect key="frame" x="12" y="12" width="351" height="33"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="ご連絡先等に関する情報を入力して下さい。複数人でのご参加の場合は代表者の情報を記載。">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="13" name="HiraginoSans-W3"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="8LC-Mq-Q0Q" secondAttribute="trailing" constant="12" id="9h7-aA-Pep"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="DLV-ns-K1f"/>
+                                                    <constraint firstItem="8LC-Mq-Q0Q" firstAttribute="leading" secondItem="cH7-UF-Lvq" secondAttribute="leading" constant="12" id="DhK-0M-io8"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8LC-Mq-Q0Q" secondAttribute="bottom" constant="12" id="Fmb-Zc-m2X"/>
+                                                    <constraint firstItem="8LC-Mq-Q0Q" firstAttribute="top" secondItem="cH7-UF-Lvq" secondAttribute="top" constant="12" id="QR5-4o-eCx"/>
+                                                    <constraint firstAttribute="height" priority="250" constant="57" id="WQ4-aI-ISx"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6BW-DD-5Pg" customClass="FormInputTextFieldView" customModule="ReservationFormExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="101" width="375" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="BPl-c3-cRY"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXs-hd-seD" customClass="FormInputTextFieldView" customModule="ReservationFormExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="201" width="375" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="gfG-zk-JtP"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsU-Ia-OlL" customClass="FormInputTextFieldView" customModule="ReservationFormExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="301" width="375" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="4l9-7K-vTV"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSy-zp-d9g">
+                                                <rect key="frame" x="0.0" y="401" width="375" height="80"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMq-G7-NIs">
+                                                        <rect key="frame" x="12" y="12" width="351" height="56"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="ここまでで最低限必要な情報は入力が終わりました。もし情報を変更する場合などはスワイプで戻って修正ができます。※サンプルなので情報が送信されません。">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="13" name="HiraginoSans-W3"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="yMq-G7-NIs" firstAttribute="leading" secondItem="sSy-zp-d9g" secondAttribute="leading" constant="12" id="G9Z-RH-K5h"/>
+                                                    <constraint firstAttribute="bottom" secondItem="yMq-G7-NIs" secondAttribute="bottom" constant="12" id="M26-CZ-Nlv"/>
+                                                    <constraint firstAttribute="height" priority="250" constant="80" id="Qlj-c8-Lzl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yMq-G7-NIs" secondAttribute="trailing" constant="12" id="V3p-NK-UKX"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="cnK-R4-xLb"/>
+                                                    <constraint firstItem="yMq-G7-NIs" firstAttribute="top" secondItem="sSy-zp-d9g" secondAttribute="top" constant="12" id="tq2-1B-a3R"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="osQ-WP-i92" secondAttribute="bottom" id="CI2-IC-yHQ"/>
+                                    <constraint firstItem="osQ-WP-i92" firstAttribute="top" secondItem="UaZ-mZ-ANY" secondAttribute="top" id="b6C-Rh-hxm"/>
+                                    <constraint firstItem="osQ-WP-i92" firstAttribute="leading" secondItem="UaZ-mZ-ANY" secondAttribute="leading" id="gZp-1J-REM"/>
+                                    <constraint firstAttribute="trailing" secondItem="osQ-WP-i92" secondAttribute="trailing" id="oK1-DE-phU"/>
+                                    <constraint firstItem="osQ-WP-i92" firstAttribute="width" secondItem="UaZ-mZ-ANY" secondAttribute="width" id="pIt-D8-CXR"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UaZ-mZ-ANY" firstAttribute="trailing" secondItem="bVN-8x-Jxo" secondAttribute="trailing" id="67c-QB-et3"/>
+                            <constraint firstItem="UaZ-mZ-ANY" firstAttribute="top" secondItem="V7J-yh-Wmw" secondAttribute="top" id="8Ub-Vc-Hnc"/>
+                            <constraint firstItem="UaZ-mZ-ANY" firstAttribute="leading" secondItem="bVN-8x-Jxo" secondAttribute="leading" id="g1f-15-KyB"/>
+                            <constraint firstItem="UaZ-mZ-ANY" firstAttribute="bottom" secondItem="bVN-8x-Jxo" secondAttribute="bottom" id="h7h-pX-0G2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bVN-8x-Jxo"/>
+                    </view>
+                    <connections>
+                        <outlet property="formScrollView" destination="UaZ-mZ-ANY" id="Hob-5l-qNq"/>
+                        <outlet property="inputAddressView" destination="6BW-DD-5Pg" id="oho-rs-Ol2"/>
+                        <outlet property="inputMailaddressView" destination="rsU-Ia-OlL" id="KVh-3L-3xK"/>
+                        <outlet property="inputTelephoneView" destination="pXs-hd-seD" id="LYa-WP-Icn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f98-bI-jb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717.60000000000002" y="162.3688155922039"/>
+        </scene>
+        <!--Form Contents Third View Controller-->
+        <scene sceneID="ZYz-CU-iRn">
+            <objects>
+                <viewController storyboardIdentifier="FormContentsThirdViewController" id="gN6-oO-wzl" customClass="FormContentsThirdViewController" customModule="ReservationFormExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oau-G5-wv6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8f-r5-7Nx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oNt-9L-6gV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="409"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URZ-7b-iuZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step3: 追加情報の選択 (3/3)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MId-hV-WHq">
+                                                        <rect key="frame" x="12" y="14" width="351" height="15"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                        <color key="textColor" red="0.42745098040000001" green="0.70980392160000005" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="MId-hV-WHq" firstAttribute="centerY" secondItem="URZ-7b-iuZ" secondAttribute="centerY" id="KDb-IF-YOe"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MId-hV-WHq" secondAttribute="trailing" constant="12" id="MTT-Ar-Lpu"/>
+                                                    <constraint firstAttribute="height" constant="44" id="kth-eU-ahQ"/>
+                                                    <constraint firstItem="MId-hV-WHq" firstAttribute="leading" secondItem="URZ-7b-iuZ" secondAttribute="leading" constant="12" id="yXt-Qg-mbV"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-rY-2Aj">
+                                                <rect key="frame" x="0.0" y="44" width="375" height="57"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwc-qg-Vyf">
+                                                        <rect key="frame" x="12" y="12" width="351" height="33"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="お疲れ様でした。最後の確認及びおトクな情報や定期的なお知らせを受け取る設定を行います。">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="13" name="HiraginoSans-W3"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Rwc-qg-Vyf" secondAttribute="trailing" constant="12" id="8Kg-3r-cMC"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Rwc-qg-Vyf" secondAttribute="bottom" constant="12" id="8b3-9u-VSa"/>
+                                                    <constraint firstAttribute="height" priority="250" constant="57" id="WkP-s7-9K2"/>
+                                                    <constraint firstItem="Rwc-qg-Vyf" firstAttribute="leading" secondItem="lrZ-rY-2Aj" secondAttribute="leading" constant="12" id="kqq-DS-qv1"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="sRm-gS-fBd"/>
+                                                    <constraint firstItem="Rwc-qg-Vyf" firstAttribute="top" secondItem="lrZ-rY-2Aj" secondAttribute="top" constant="12" id="sUd-gv-jXI"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agm-UI-BL2" customClass="FormInputSwitchView" customModule="ReservationFormExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="101" width="375" height="54"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="54" id="77I-mf-XcO"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCl-Eb-DUd" customClass="FormInputSwitchView" customModule="ReservationFormExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="155" width="375" height="54"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="54" id="qyU-hb-ipN"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAK-w7-iF4" customClass="FormInputSwitchView" customModule="ReservationFormExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="209" width="375" height="54"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="54" id="MCZ-yC-d3q"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gge-sn-R1e">
+                                                <rect key="frame" x="0.0" y="263" width="375" height="146"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAm-s7-fdK">
+                                                        <rect key="frame" x="12" y="12" width="351" height="57"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="お疲れ様でした。ここまでで入力は完了です。もし別途でのお問い合わせが必要な場合には返信メールにある「お問い合わせ専用メールアドレス」からお問い合わせ下さい。">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="13" name="HiraginoSans-W3"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOO-sW-heZ">
+                                                        <rect key="frame" x="67" y="85" width="240" height="45"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="予約情報を登録する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVg-AO-wIZ">
+                                                                <rect key="frame" x="8" y="15" width="224" height="15"/>
+                                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                                <color key="textColor" red="0.2666666667" green="0.68235294120000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5I-dY-L5A">
+                                                                <rect key="frame" x="0.0" y="0.0" width="240" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="9WF-3V-ZiO"/>
+                                                                    <constraint firstAttribute="width" constant="240" id="NQv-PX-gjP"/>
+                                                                </constraints>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="z5I-dY-L5A" firstAttribute="top" secondItem="UOO-sW-heZ" secondAttribute="top" id="9oZ-Ua-Hu1"/>
+                                                            <constraint firstAttribute="trailing" secondItem="QVg-AO-wIZ" secondAttribute="trailing" constant="8" id="F9y-lv-oI0"/>
+                                                            <constraint firstItem="QVg-AO-wIZ" firstAttribute="leading" secondItem="UOO-sW-heZ" secondAttribute="leading" constant="8" id="UXz-ZF-axO"/>
+                                                            <constraint firstAttribute="bottom" secondItem="z5I-dY-L5A" secondAttribute="bottom" id="cPD-1D-ZtI"/>
+                                                            <constraint firstItem="z5I-dY-L5A" firstAttribute="leading" secondItem="UOO-sW-heZ" secondAttribute="leading" id="gPk-Tq-jIU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="z5I-dY-L5A" secondAttribute="trailing" id="wjx-Za-mXD"/>
+                                                            <constraint firstItem="QVg-AO-wIZ" firstAttribute="centerY" secondItem="UOO-sW-heZ" secondAttribute="centerY" id="xjQ-gr-kik"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="hAm-s7-fdK" secondAttribute="trailing" constant="12" id="2GM-aI-lBE"/>
+                                                    <constraint firstItem="hAm-s7-fdK" firstAttribute="leading" secondItem="gge-sn-R1e" secondAttribute="leading" constant="12" id="9t6-fe-SAe"/>
+                                                    <constraint firstAttribute="height" priority="250" constant="146" id="C7h-qO-hdE"/>
+                                                    <constraint firstItem="UOO-sW-heZ" firstAttribute="top" secondItem="hAm-s7-fdK" secondAttribute="bottom" constant="16" id="Rb2-A7-dt6"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="aA7-F1-t5a"/>
+                                                    <constraint firstAttribute="bottom" secondItem="UOO-sW-heZ" secondAttribute="bottom" constant="16" id="ouD-iI-9Qs"/>
+                                                    <constraint firstItem="UOO-sW-heZ" firstAttribute="centerX" secondItem="gge-sn-R1e" secondAttribute="centerX" id="xiW-hS-6D8"/>
+                                                    <constraint firstItem="hAm-s7-fdK" firstAttribute="top" secondItem="gge-sn-R1e" secondAttribute="top" constant="12" id="ywR-7d-C8G"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oNt-9L-6gV" secondAttribute="trailing" id="HYi-P7-7rq"/>
+                                    <constraint firstItem="oNt-9L-6gV" firstAttribute="width" secondItem="S8f-r5-7Nx" secondAttribute="width" id="V4f-jb-zSq"/>
+                                    <constraint firstItem="oNt-9L-6gV" firstAttribute="leading" secondItem="S8f-r5-7Nx" secondAttribute="leading" id="dDH-VZ-fG4"/>
+                                    <constraint firstAttribute="bottom" secondItem="oNt-9L-6gV" secondAttribute="bottom" id="n81-Bs-luw"/>
+                                    <constraint firstItem="oNt-9L-6gV" firstAttribute="top" secondItem="S8f-r5-7Nx" secondAttribute="top" id="ptX-i2-XSc"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S8f-r5-7Nx" firstAttribute="top" secondItem="Oau-G5-wv6" secondAttribute="top" id="K1j-ZZ-Zsr"/>
+                            <constraint firstItem="S8f-r5-7Nx" firstAttribute="bottom" secondItem="uzs-RT-G6q" secondAttribute="bottom" id="ekD-I0-PoQ"/>
+                            <constraint firstItem="S8f-r5-7Nx" firstAttribute="trailing" secondItem="uzs-RT-G6q" secondAttribute="trailing" id="ua5-zz-TaN"/>
+                            <constraint firstItem="S8f-r5-7Nx" firstAttribute="leading" secondItem="uzs-RT-G6q" secondAttribute="leading" id="xuL-QY-yJb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uzs-RT-G6q"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputAgreementView" destination="agm-UI-BL2" id="3gA-GV-vuC"/>
+                        <outlet property="inputAllowMailMagazineView" destination="cAK-w7-iF4" id="1EE-jo-dgp"/>
+                        <outlet property="inputAllowTelephoneView" destination="ZCl-Eb-DUd" id="m0W-MW-5zD"/>
+                        <outlet property="submitButton" destination="z5I-dY-L5A" id="Lgn-4X-Adl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THl-iR-1X9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1432.8" y="161.46926536731635"/>
+        </scene>
+    </scenes>
 </document>

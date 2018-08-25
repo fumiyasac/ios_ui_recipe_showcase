@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FormSelectTableViewCell" customModule="ReservationFormExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="57.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxb-ls-zff">
+                        <rect key="frame" x="12" y="8" width="46" height="20"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="d4l-ed-rBW"/>
+                            <constraint firstAttribute="height" constant="20" id="oH0-Yo-AO6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開催日: 2018/10/18 20:00~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSO-8z-LAX">
+                        <rect key="frame" x="12" y="35" width="308" height="15"/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
+                        <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="テキストが入ります" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQK-i9-6Db">
+                        <rect key="frame" x="66" y="12" width="238" height="11"/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="11"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vV-tx-mjB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nQK-i9-6Db" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="ESu-SK-cym"/>
+                    <constraint firstItem="7vV-tx-mjB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TQj-tI-bcd"/>
+                    <constraint firstItem="nSO-8z-LAX" firstAttribute="top" secondItem="Qxb-ls-zff" secondAttribute="bottom" constant="7" id="UN7-nr-ihx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nQK-i9-6Db" secondAttribute="trailing" id="UrL-r4-Y5y"/>
+                    <constraint firstItem="Qxb-ls-zff" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="VAx-ef-VcQ"/>
+                    <constraint firstAttribute="trailing" secondItem="nSO-8z-LAX" secondAttribute="trailing" id="X4Y-YZ-NAY"/>
+                    <constraint firstItem="nSO-8z-LAX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Z8T-o3-x0m"/>
+                    <constraint firstAttribute="bottom" secondItem="nSO-8z-LAX" secondAttribute="bottom" constant="7.5" id="ZQn-53-mZp"/>
+                    <constraint firstAttribute="bottom" secondItem="7vV-tx-mjB" secondAttribute="bottom" id="e2z-gr-S0D"/>
+                    <constraint firstAttribute="trailing" secondItem="7vV-tx-mjB" secondAttribute="trailing" id="jZx-yV-lye"/>
+                    <constraint firstItem="nQK-i9-6Db" firstAttribute="leading" secondItem="Qxb-ls-zff" secondAttribute="trailing" constant="8" id="kPT-0k-wRR"/>
+                    <constraint firstItem="7vV-tx-mjB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lHk-Dx-u3F"/>
+                    <constraint firstItem="Qxb-ls-zff" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="zzM-d6-2jL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="dateLabel" destination="nSO-8z-LAX" id="N83-2c-piS"/>
+                <outlet property="selectButton" destination="7vV-tx-mjB" id="Udt-RU-q2r"/>
+                <outlet property="selectedLabel" destination="Qxb-ls-zff" id="8pi-Ig-ILd"/>
+                <outlet property="titleLabel" destination="nQK-i9-6Db" id="o9N-gH-dDi"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
