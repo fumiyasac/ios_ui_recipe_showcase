@@ -14,7 +14,7 @@ class FormSelectTableViewCell: UITableViewCell {
 
     @IBOutlet weak private var selectedLabel: UILabel!
     @IBOutlet weak private var titleLabel: UILabel!
-    @IBOutlet weak private var dateLabel: UILabel!
+    @IBOutlet weak private var termLabel: UILabel!
     @IBOutlet weak private var selectButton: UIButton!
 
     // MARK: - Initializer
@@ -27,12 +27,15 @@ class FormSelectTableViewCell: UITableViewCell {
 
     // MARK: - Functions
 
-    func setCell(_ /*event: Event,*/ selected: Bool) {
+    func setCell(_ event: EventEntity, selected: Bool) {
         if selected {
             selectedLabel.backgroundColor = UIColor(code: "#44aeea")
         } else {
             selectedLabel.backgroundColor = UIColor(code: "#cccccc")
         }
+
+        titleLabel.text = event.title
+        termLabel.text  = event.term
     }
 
     // MARK: - Private Function

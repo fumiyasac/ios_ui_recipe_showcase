@@ -66,9 +66,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
-                <outlet property="dateLabel" destination="nSO-8z-LAX" id="N83-2c-piS"/>
                 <outlet property="selectButton" destination="7vV-tx-mjB" id="Udt-RU-q2r"/>
                 <outlet property="selectedLabel" destination="Qxb-ls-zff" id="8pi-Ig-ILd"/>
+                <outlet property="termLabel" destination="nSO-8z-LAX" id="7PZ-Dx-NeS"/>
                 <outlet property="titleLabel" destination="nQK-i9-6Db" id="o9N-gH-dDi"/>
             </connections>
         </tableViewCell>

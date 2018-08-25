@@ -45,16 +45,15 @@ class FormViewController: UIViewController {
         self.view.endEditing(true)
 
         // ポップアップで戻る前の確認表示を行う
-        showCloseAlertWith(
-            title: "フォームから移動しますか？",
-            message: "現在入力中のデータは削除されます。\n本当に移動しますか？",
-            completionHandler: {
+        let title = "フォームから移動しますか？"
+        let message = "現在入力中のデータは削除されます。\n本当に移動しますか？"
+        let completionHandler: (() -> ())? = {
+            FormDataStore.deleteAll()
+            self.dismiss(animated: true, completion: nil)
+        }
 
-                // 入力途中のデータを消去して画面へ戻る
-                FormDataStore.deleteAll()
-                self.dismiss(animated: true, completion: nil)
-            }
-        )
+        // 入力途中のデータを消去して画面へ戻る
+        showCloseAlertWith(title: title, message: message, completionHandler: completionHandler)
     }
 
     @objc private func nextButtonTapped(_ sender: UIButton) {
@@ -69,13 +68,13 @@ class FormViewController: UIViewController {
         }
     }
 
-    //
+    // KYNavigationProgressの動かす位置を設定する
     private func setKYNavigationProgressRatio() {
         let ratio = Float(selectedTag) / Float(targetViewControllerLists.count - 1)
         self.navigationController?.setProgress(ratio, animated: true)
     }
 
-    //
+    // 右上の次へボタンの表示状態を設定する
     private func setNextButtonVisibility() {
         let view: UIView = nextButton.value(forKey: "view") as! UIView
         view.isHidden = (selectedTag == targetViewControllerLists.count - 1)

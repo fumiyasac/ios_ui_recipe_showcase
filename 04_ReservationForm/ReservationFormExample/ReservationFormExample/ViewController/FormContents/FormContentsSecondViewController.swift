@@ -49,9 +49,9 @@ class FormContentsSecondViewController: UIViewController {
 
     // MARK: - Private Function
 
+    // キーボードを開く際のObserver処理（キーボードの高さ分だけ中をずらす）
+    // 参考: https://newfivefour.com/swift-ios-xcode-resizing-on-keyboard.html
     @objc private func keyboardWillBeShown(_ notification: Notification) {
-
-        // キーボードを開く際のObserver処理
         guard let userInfo = notification.userInfo as? [String : Any] else {
             return
         }
@@ -70,9 +70,8 @@ class FormContentsSecondViewController: UIViewController {
         })
     }
 
+    // キーボードを閉じる際のObserver処理（中をずらしたのを戻す）
     @objc private func keyboardWillBeHidden(_ notification: Notification) {
-
-        // キーボードを閉じる際のObserver処理
         guard let userInfo = notification.userInfo as? [String : Any] else {
             return
         }
@@ -139,19 +138,19 @@ extension FormContentsSecondViewController: FormInputTextFieldDelegate {
             FormDataStore.shared.address = text
 
             // Debug.
-            print("入力された住所:", FormDataStore.shared.address)
+            //print("入力された住所:", FormDataStore.shared.address)
 
         case TextFieldType.inputTelephone:
             FormDataStore.shared.telephone = text
 
             // Debug.
-            print("入力された電話番号:", FormDataStore.shared.telephone)
+            //print("入力された電話番号:", FormDataStore.shared.telephone)
 
         case TextFieldType.inputMailaddress:
             FormDataStore.shared.mailaddress = text
             
             // Debug.
-            print("入力されたメールアドレス:", FormDataStore.shared.mailaddress)
+            //print("入力されたメールアドレス:", FormDataStore.shared.mailaddress)
 
         default:
             return

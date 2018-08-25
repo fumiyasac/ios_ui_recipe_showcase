@@ -22,6 +22,12 @@ class FormSelectTableView: CustomViewBase {
 
     private var selectedId: Int = 0
 
+    private var eventList: [EventEntity] = [] {
+        didSet {
+            self.selectTableView.reloadData()
+        }
+    }
+
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var remarkLabel: UILabel!
     @IBOutlet weak private var descriptionLabel: UILabel!
@@ -60,13 +66,13 @@ class FormSelectTableView: CustomViewBase {
         descriptionLabel.text = text
     }
 
+    func setEventList(_ events: [EventEntity]) {
+        eventList = events
+    }
+
     // MARK: - Private Function
 
     private func setupFormInputSelectTableView() {
-
-        //
-
-        //
         selectTableView.delegate = self
         selectTableView.dataSource = self
         selectTableView.registerCustomCell(FormSelectTableViewCell.self)
@@ -76,14 +82,17 @@ class FormSelectTableView: CustomViewBase {
 extension FormSelectTableView: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return eventList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCustomCell(with: FormSelectTableViewCell.self)
-        cell.setCell(selectedId == indexPath.row + 1)
+        let event = eventList[indexPath.row]
+        let selectedResult = (selectedId == event.id)
+
+        cell.setCell(event, selected: selectedResult)
         cell.selectButtonTappedhandler = {
-            self.selectedId = indexPath.row + 1 //仮の値
+            self.selectedId = event.id
             self.selectTableView.reloadData()
             self.delegate?.getSelectedId(self.selectedId)
         }

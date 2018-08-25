@@ -49,9 +49,9 @@ class FormContentsFirstViewController: UIViewController {
 
     // MARK: - Private Function
 
+    // キーボードを開く際のObserver処理（キーボードの高さ分だけ中をずらす）
+    // 参考: https://newfivefour.com/swift-ios-xcode-resizing-on-keyboard.html
     @objc private func keyboardWillBeShown(_ notification: Notification) {
-
-        // キーボードを開く際のObserver処理
         guard let userInfo = notification.userInfo as? [String : Any] else {
             return
         }
@@ -70,9 +70,8 @@ class FormContentsFirstViewController: UIViewController {
         })
     }
 
+    // キーボードを閉じる際のObserver処理（中をずらしたのを戻す）
     @objc private func keyboardWillBeHidden(_ notification: Notification) {
-
-        // キーボードを閉じる際のObserver処理
         guard let userInfo = notification.userInfo as? [String : Any] else {
             return
         }
@@ -126,6 +125,7 @@ class FormContentsFirstViewController: UIViewController {
         selectEventView.setTitle("参加イベントの選択:")
         selectEventView.setRemark("※必須", isRequired: true)
         selectEventView.setDescription("参加予定のイベントを下記より1つ選択")
+        selectEventView.setEventList(EventModel.getAllEvents())
     }
 }
 
@@ -151,7 +151,7 @@ extension FormContentsFirstViewController: FormInputCounterDelegate {
         FormDataStore.shared.ticketCount = counter
 
         // Debug.
-        print("チケットの枚数:", FormDataStore.shared.ticketCount)
+        //print("チケットの枚数:", FormDataStore.shared.ticketCount)
     }
 }
 
@@ -163,7 +163,7 @@ extension FormContentsFirstViewController: FormSelectTableDelegate {
         FormDataStore.shared.eventId = targetId
 
         // Debug.
-        print("選択したイベントのID:", FormDataStore.shared.eventId)
+        //print("選択したイベントのID:", FormDataStore.shared.eventId)
     }
 }
 

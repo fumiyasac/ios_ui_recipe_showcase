@@ -41,7 +41,10 @@ class FormContentsThirdViewController: UIViewController {
             title   = "予約情報を受け付けました"
             message = "確認メールを入力して頂きましたメールアドレスへ送信しておりますので不備や誤りがないかをご確認下さい。\n※サンプルなので実際の動作は行われません。"
             completionHandler = {
-                
+
+                // MEMO: サンプルなのでこれまでの内容を削除しているが、ここでデータを送信する処理を本来は行う
+                FormDataStore.deleteAll()
+
                 // MEMO: 現在のViewController → UIPageViewController → FormViewControllerと辿る
                 let parentVC = self.parent?.parent as! FormViewController
                 parentVC.dismiss(animated: true, completion: nil)
@@ -78,7 +81,7 @@ class FormContentsThirdViewController: UIViewController {
         submitButton.addTarget(self, action: #selector(self.submitButtonTapped), for: .touchUpInside)
     }
 
-    //
+    // データ送信ボタンを押下した際のアラート表示を共通化したメソッド
     private func showAlertWith(title: String, message: String, completionHandler: (() -> ())? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
@@ -100,19 +103,19 @@ extension FormContentsThirdViewController: FormInputSwitchDelegate {
             FormDataStore.shared.agreement = isOn
 
             // Debug.
-            print("個人情報の取り扱いへの同意:", FormDataStore.shared.agreement)
+            //print("個人情報の取り扱いへの同意:", FormDataStore.shared.agreement)
 
         case SwitchType.allowTelephone:
             FormDataStore.shared.allowTelephone = isOn
 
             // Debug.
-            print("前日の確認電話の希望:", FormDataStore.shared.telephone)
+            //print("前日の確認電話の希望:", FormDataStore.shared.telephone)
 
         case SwitchType.allowMailMagazine:
             FormDataStore.shared.allowMailMagazine = isOn
 
             // Debug.
-            print("ニュースレターの希望:", FormDataStore.shared.allowMailMagazine)
+            //print("ニュースレターの希望:", FormDataStore.shared.allowMailMagazine)
         }
     }
 }
