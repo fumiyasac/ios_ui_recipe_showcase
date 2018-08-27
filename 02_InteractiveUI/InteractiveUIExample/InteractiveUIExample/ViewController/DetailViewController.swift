@@ -123,12 +123,15 @@ class DetailViewController: UIViewController {
         iconImageView.image = UIImage.fontAwesomeIcon(name: .fish, style: .solid, textColor: UIColor(code: "#7182ff"), size: CGSize(width: 20, height: 20))
 
         // データを表示させる
-        nameTextLabel.text               = targetFood.name
-        englishNameTextLabel.text        = "英語名: " + targetFood.englishName
-        ratingStarView.settings.fillMode = .precise
-        ratingStarView.rating            = Double(targetFood.rate)
-        ratingTextLabel.text             = String(targetFood.rate)
-        priceTextLabel.text              = "お値段: ¥" + String(targetFood.price) + "（1貫）"
+        nameTextLabel.text        = targetFood.name
+        englishNameTextLabel.text = "英語名: " + targetFood.englishName
+        ratingTextLabel.text      = String(targetFood.rate)
+        priceTextLabel.text       = "お値段: ¥" + String(targetFood.price) + "（1貫）"
+
+        // Cosmosによる星のレーティング表示
+        ratingStarView.settings.updateOnTouch = false
+        ratingStarView.settings.fillMode      = .precise
+        ratingStarView.rating                 = Double(targetFood.rate)
 
         // リンク付きテキストの設定を行う
         let withUrlString = "【写真素材】写真AC様\nhttps://www.photo-ac.com/ \n\n【使用したライブラリ】\nFontAwesome.swift:\nhttp://bit.ly/2vUpV2V \nCosmos:\nhttp://bit.ly/2MWg6rA \nActiveLabel.swift:\nhttp://bit.ly/2vQd41U \n\n【参考リンク】その他カスタムトランジションを使った表現\nHow to Create a Navigation Transition Like the Apple News App:\nhttp://bit.ly/2vVMlRi \nMaking the App Store iOS 11 Custom Transitions:\nhttp://bit.ly/2vSiiKt \n\n"
