@@ -63,6 +63,7 @@ class PhotoViewController: UIViewController {
     @objc private func closeButtonTapped() {
         self.dismiss(animated: true, completion: nil)
     }
+
     private func setupPhotoScrollView() {
         photoScrollView.delegate = self
         photoImageView.image = targetTravelModel.image
@@ -74,7 +75,7 @@ class PhotoViewController: UIViewController {
         photoCloseButton.addTarget(self, action: #selector(self.closeButtonTapped), for: .touchUpInside)
     }
 
-    // Story用の写真の拡大縮小比を設定する
+    // 画面に初回表示をした際の写真の拡大縮小比を設定する
     private func initializePhotoImageViewScale(_ size: CGSize) {
         
         // self.viewのサイズを元にUIImageViewに表示する画像の縦横サイズの比を取り、小さい方を適用する
