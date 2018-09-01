@@ -77,6 +77,10 @@ class BaseViewController: UIViewController {
         // → メインコンテンツと透明ボタンをドラッグで動かすことができるようにする
         if sideNavigationStatus == .opened && touchBeganPositionX >= 260 {
 
+            // サイドナビゲーション及びメインコンテンツのタッチイベントを無効にする
+            sideNavigationContainer.isUserInteractionEnabled = false
+            mainContentsContainer.isUserInteractionEnabled = false
+
             let touchEvent = touches.first!
 
             // ドラッグ前の座標
@@ -146,10 +150,8 @@ class BaseViewController: UIViewController {
     // サイドナビゲーションが閉じた状態から左隅のドラッグを行ってコンテンツを開く際の処理
     @objc private func edgeTapGesture(sender: UIScreenEdgePanGestureRecognizer) {
         
-        // サイドナビゲーションのタッチイベントを有効にする
-        sideNavigationContainer.isUserInteractionEnabled = true
-
-        // メインコンテンツのタッチイベントを無効にする
+        // サイドナビゲーション及びメインコンテンツのタッチイベントを無効にする
+        sideNavigationContainer.isUserInteractionEnabled = false
         mainContentsContainer.isUserInteractionEnabled = false
 
         // 移動量を取得する
@@ -215,6 +217,12 @@ class BaseViewController: UIViewController {
     // サイドナビゲーションを開くアニメーションを実行する
     private func executeSideOpenAnimation(withCompletion: (() -> ())? = nil) {
 
+        // サイドナビゲーションはタッチイベントを有効にする
+        self.sideNavigationContainer.isUserInteractionEnabled = true
+
+        // メインコンテンツはタッチイベントを無効にする
+        self.mainContentsContainer.isUserInteractionEnabled = false
+
         UIView.animate(withDuration: 0.16, delay: 0, options: [.curveEaseOut], animations: {
 
             // メインコンテンツを移動させてサイドメニューを表示させる
@@ -237,12 +245,6 @@ class BaseViewController: UIViewController {
 
         }, completion: { _ in
 
-            // サイドナビゲーションはタッチイベントを有効にする
-            self.sideNavigationContainer.isUserInteractionEnabled = true
-
-            // メインコンテンツはタッチイベントを無効にする
-            self.mainContentsContainer.isUserInteractionEnabled = false
-
             // 引数で受け取った完了時に行いたい処理を実行する
             withCompletion?()
         })
@@ -250,6 +252,12 @@ class BaseViewController: UIViewController {
 
     // サイドナビゲーションを開くアニメーションを実行する
     private func executeSideCloseAnimation(withCompletion: (() -> ())? = nil) {
+
+        // サイドナビゲーションはタッチイベントを無効にする
+        self.sideNavigationContainer.isUserInteractionEnabled = false
+
+        // メインコンテンツはタッチイベントを有効にする
+        self.mainContentsContainer.isUserInteractionEnabled = true
 
         UIView.animate(withDuration: 0.16, delay: 0, options: [.curveEaseOut], animations: {
 
@@ -272,12 +280,6 @@ class BaseViewController: UIViewController {
             self.sideNavigationContainer.alpha = 0
 
         }, completion: { _ in
-
-            // サイドナビゲーションはタッチイベントを無効にする
-            self.sideNavigationContainer.isUserInteractionEnabled = false
-
-            // メインコンテンツはタッチイベントを有効にする
-            self.mainContentsContainer.isUserInteractionEnabled = true
 
             // 引数で受け取った完了時に行いたい処理を実行する
             withCompletion?()

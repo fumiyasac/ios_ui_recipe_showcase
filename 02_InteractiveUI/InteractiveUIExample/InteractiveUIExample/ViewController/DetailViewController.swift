@@ -7,11 +7,20 @@
 //
 
 import UIKit
-import SafariServices
 import Cosmos
 import ActiveLabel
 import FontAwesome_swift
 
+/**
+ * 補足: このViewControllerから更に画面遷移を行う場合
+ *
+ * この画面ではNavigationBarにカスタマイズを加えた故に従来通りの方法で、
+ * 「self.navigationController?.pushViewController(controller, animated: true)」
+ * としてもうまく遷移ができない。
+ * このような場合には、Modalでの画面遷移を用いて更にカスタムトランジションでPush/Popに近い動きを実装する等
+ * 遷移から戻った際の表示の考慮をする必要があります。
+ * (例)この場合ではタイトルが動くダミーのヘッダー用のViewや戻るボタンの構成を変更する必要があります。
+ */
 class DetailViewController: UIViewController {
 
     // ダミーのヘッダー用のViewのY軸方向の位置（iPhoneX用に補正あり）
@@ -146,10 +155,7 @@ class DetailViewController: UIViewController {
         addtionalLinkLabel.enabledTypes  = [.url]
         addtionalLinkLabel.attributedText = NSAttributedString(string: withUrlString, attributes: attributes)
         addtionalLinkLabel.handleURLTap { url in
-
-            // SFSafariViewControllerで該当のリンク先を表示する
-            let vc = SFSafariViewController(url: url)
-            self.present(vc, animated: true, completion: nil)
+            UIApplication.shared.open(url, options: [:])
         }
     }
 }
