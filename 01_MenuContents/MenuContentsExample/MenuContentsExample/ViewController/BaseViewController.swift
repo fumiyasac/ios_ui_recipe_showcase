@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SafariServices
 
 class BaseViewController: UIViewController {
 
@@ -303,15 +302,13 @@ class BaseViewController: UIViewController {
 
     private func showQiitaWebPage() {
         if let qiitaUrl = URL(string: "https://qiita.com/fumiyasac@github/items/eb5b17ab90f5aa27b793") {
-            let vc = SFSafariViewController(url: qiitaUrl)
-            self.present(vc, animated: true, completion: nil)
+            UIApplication.shared.open(qiitaUrl, options: [:])
         }
     }
 
     private func showSlideshareWebPage() {
         if let slideshareNewsUrl = URL(string: "http://www.slideshare.net/fumiyasakai37/uikitdiypart1") {
-            let vc = SFSafariViewController(url: slideshareNewsUrl)
-            self.present(vc, animated: true, completion: nil)
+            UIApplication.shared.open(slideshareNewsUrl, options: [:])
         }
     }
 }
