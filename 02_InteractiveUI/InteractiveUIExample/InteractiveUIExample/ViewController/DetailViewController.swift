@@ -145,7 +145,28 @@ class DetailViewController: UIViewController {
         ratingStarView.rating                 = Double(targetFood.rate)
 
         // リンク付きテキストの設定を行う
-        let withUrlString = "【写真素材】写真AC様\nhttps://www.photo-ac.com/ \n\n【使用したライブラリ】\nFontAwesome.swift:\nhttp://bit.ly/2vUpV2V \nCosmos:\nhttp://bit.ly/2MWg6rA \nActiveLabel.swift:\nhttp://bit.ly/2vQd41U \n\n【参考リンク】その他カスタムトランジションを使った表現\nHow to Create a Navigation Transition Like the Apple News App:\nhttp://bit.ly/2vVMlRi \nMaking the App Store iOS 11 Custom Transitions:\nhttp://bit.ly/2vSiiKt \n\n"
+        let withUrlString = """
+        【写真素材】
+        ・写真AC様
+        https://www.photo-ac.com/
+
+        【使用したライブラリ】
+        ・FontAwesome.swift：
+        http://bit.ly/2vUpV2V
+        ・Cosmos：
+        http://bit.ly/2MWg6rA
+        ・ActiveLabel.swift：
+        http://bit.ly/2vQd41U
+
+        【参考リンク】
+        その他カスタムトランジションを使った表現
+        ・How to Create a Navigation Transition Like the Apple News App：
+        http://bit.ly/2vVMlRi
+        ・Making the App Store iOS 11 Custom Transitions：
+        http://bit.ly/2vSiiKt
+
+
+        """
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 5
 
