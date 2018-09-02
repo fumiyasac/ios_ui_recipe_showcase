@@ -19,8 +19,8 @@ import FontAwesome_swift
  * としてもうまく遷移ができない。
  * このような場合には、Modalでの画面遷移を用いて更にカスタムトランジションでPush/Popに近い動きを実装する等
  * 遷移から戻った際の表示の考慮をする必要があります。
- * (例)この場合ではタイトルが動くダミーのヘッダー用のViewや戻るボタンの構成を変更する必要があります。
- * このサンプルのMainからArticleへの遷移時の実装が近いかと思います。
+ * (例)この場合ではタイトルが動くダミーのヘッダー用のViewや戻るボタンをそれぞれ別のViewに分解した上で配置を行う等の構成を変更する必要があります。
+ * (参考)このサンプルのMainからArticleへの遷移時の実装が近いかと思います。
  * https://github.com/fumiyasac/InteractiveUISample
  */
 class DetailViewController: UIViewController {
