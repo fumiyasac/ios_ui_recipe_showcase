@@ -17,7 +17,7 @@ class DetailTransition: NSObject {
     // トランジションの秒数
     private let duration: TimeInterval = 0.28
 
-    // トランジションの方向(present: true, dismiss: false)
+    // トランジションの方向(push: true, pop: false)
     var presenting: Bool = true
 
     // アニメーション対象なるViewControllerの位置やサイズ情報を格納するメンバ変数
