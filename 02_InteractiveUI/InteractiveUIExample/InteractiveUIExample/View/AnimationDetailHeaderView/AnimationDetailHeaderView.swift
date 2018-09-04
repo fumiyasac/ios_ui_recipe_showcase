@@ -13,11 +13,6 @@ class AnimationDetailHeaderView: CustomViewBase {
 
     var headerBackButtonTappedHandler: (() -> ())?
 
-    // 初期状態のheaderWrappedViewTopConstraintのマージン値（iPhoneX用に補正あり）
-    private let defaultHeaderMargin: CGFloat = {
-        return DeviceSize.iPhoneXCompatible() ? 44 : 20
-    }()
-
     @IBOutlet weak private var headerBackgroundView: UIView!
     @IBOutlet weak private var headerWrappedViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak private var headerTitle: UILabel!
@@ -55,6 +50,10 @@ class AnimationDetailHeaderView: CustomViewBase {
      * (画像のパララックス効果付きのViewの高さ) - (NavigationBarの高さを引いたもの) - (UIScrollView側のY軸方向のスクロール量)
     */
     func setHeaderNavigationTopConstraint(_ constant: CGFloat) {
+
+        // 初期状態のheaderWrappedViewTopConstraintのマージン値(StatusBarの高さと同値)
+        let defaultHeaderMargin = UIApplication.shared.statusBarFrame.height
+
         if constant > 0 {
             headerWrappedViewTopConstraint.constant = defaultHeaderMargin + constant
         } else {

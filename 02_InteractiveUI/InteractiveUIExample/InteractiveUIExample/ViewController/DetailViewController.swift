@@ -25,15 +25,11 @@ import FontAwesome_swift
  */
 class DetailViewController: UIViewController {
 
-    // ダミーのヘッダー用のViewのY軸方向の位置（iPhoneX用に補正あり）
-    private let animationHeaderViewPositionY: CGFloat = {
-        return DeviceSize.iPhoneXCompatible() ? -44.0 : -20.0
-    }()
+    // ダミーのヘッダー用のViewのY軸方向の位置
+    private var animationHeaderViewPositionY: CGFloat!
 
-    // ナビゲーションバーの高さ（iPhoneX用に補正あり）
-    private let navigationBarHeight: CGFloat = {
-        return DeviceSize.iPhoneXCompatible() ? 88.5 : 64.0
-    }()
+    // ダミーのヘッダー用のViewの高さ
+    private var animationHeaderViewHeight: CGFloat!
 
     // NavigationBarの中に配置するダミーのヘッダー
     private var animationDetailHeaderView: AnimationDetailHeaderView = AnimationDetailHeaderView()
@@ -75,8 +71,18 @@ class DetailViewController: UIViewController {
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationItem.hidesBackButton = true
 
-        // ダミーのヘッダー用のViewをStatusBarの高さ分Y軸方向位置を減算＆ナビゲーションバーの高さを設定してnavigationBarの中に配置する
-        animationDetailHeaderView.frame = CGRect(x: 0, y: animationHeaderViewPositionY, width: self.view.bounds.width, height: navigationBarHeight)
+        // ダミーのヘッダー用のViewの高さとY軸方向位置を算出する
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        let navigationBarHeight = self.navigationController?.navigationBar.frame.height ?? 0
+
+        animationHeaderViewPositionY = -statusBarHeight
+        animationHeaderViewHeight = statusBarHeight + navigationBarHeight
+
+        // Debug.
+        //print("animationHeaderViewPositionY:", animationHeaderViewPositionY)
+        //print("navigationBarHeight:", animationHeaderViewHeight)
+
+        animationDetailHeaderView.frame = CGRect(x: 0, y: animationHeaderViewPositionY, width: self.view.bounds.width, height: animationHeaderViewHeight)
         self.navigationController?.navigationBar.addSubview(animationDetailHeaderView)
 
         // ダミーのヘッダー用のViewへ必要な値などをセットする(画面表示が完了するまでは非表示にする)
@@ -196,11 +202,11 @@ extension DetailViewController: UIScrollViewDelegate {
         // ダミーのヘッダー用のViewのアルファ値を上方向のスクロール量に応じて変化させる
         /**
          * それぞれの変数の意味と変化量と伴って変わる値に関する補足：
-         * [変数: navigationInvisibleHeight] = (画像のパララックス効果付きのViewの高さ) - (NavigationBarの高さを引いたもの)
+         * [変数: navigationInvisibleHeight] = (画像のパララックス効果付きのViewの高さ) - (ダミーのヘッダー用のViewの高さ)
          * ダミーのヘッダー用のViewのアルファの値 = 上方向のスクロール量 ÷ navigationInvisibleHeightとする
          * アルファの値域：(0 ≦ gradientHeaderView.alpha ≦ 1)
          */
-        let navigationInvisibleHeight = detailHeaderView.frame.height - navigationBarHeight
+        let navigationInvisibleHeight = detailHeaderView.frame.height - animationHeaderViewHeight
         let scrollContentOffsetY = scrollView.contentOffset.y
 
         var changedAlpha: CGFloat
