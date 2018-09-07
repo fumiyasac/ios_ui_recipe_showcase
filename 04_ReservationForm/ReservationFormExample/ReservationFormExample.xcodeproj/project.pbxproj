@@ -29,7 +29,6 @@
 		DEC8DE3A212B62D6000AC63F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE39212B62D6000AC63F /* UIColorExtension.swift */; };
 		DEC8DE3C212B6312000AC63F /* NSObjectProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE3B212B6312000AC63F /* NSObjectProtocolExtension.swift */; };
 		DEC8DE3E212B6355000AC63F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE3D212B6355000AC63F /* UIViewControllerExtension.swift */; };
-		DEC8DE40212B6FA5000AC63F /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE3F212B6FA5000AC63F /* UIImageExtension.swift */; };
 		DEC8DE42212B73DF000AC63F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE41212B73DF000AC63F /* UITableViewExtension.swift */; };
 		DEC8DE45212B7E59000AC63F /* ReservationMenuButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC8DE44212B7E59000AC63F /* ReservationMenuButtonView.xib */; };
 		DEC8DE47212B7E6B000AC63F /* ReservationMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8DE46212B7E6B000AC63F /* ReservationMenuButtonView.swift */; };
@@ -100,7 +99,6 @@
 		DEC8DE39212B62D6000AC63F /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DEC8DE3B212B6312000AC63F /* NSObjectProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtension.swift; sourceTree = "<group>"; };
 		DEC8DE3D212B6355000AC63F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		DEC8DE3F212B6FA5000AC63F /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		DEC8DE41212B73DF000AC63F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		DEC8DE44212B7E59000AC63F /* ReservationMenuButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationMenuButtonView.xib; sourceTree = "<group>"; };
 		DEC8DE46212B7E6B000AC63F /* ReservationMenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationMenuButtonView.swift; sourceTree = "<group>"; };
@@ -293,7 +291,6 @@
 			children = (
 				DEC8DE3B212B6312000AC63F /* NSObjectProtocolExtension.swift */,
 				DEC8DE39212B62D6000AC63F /* UIColorExtension.swift */,
-				DEC8DE3F212B6FA5000AC63F /* UIImageExtension.swift */,
 				DEC8DE41212B73DF000AC63F /* UITableViewExtension.swift */,
 				DEC8DE3D212B6355000AC63F /* UIViewControllerExtension.swift */,
 			);
@@ -618,7 +615,6 @@
 				DE955124212EC78F00E57328 /* FormSelectTableViewCell.swift in Sources */,
 				DE636C8921313C2E006E6ECC /* EventEntity.swift in Sources */,
 				DE636C8B21313C3A006E6ECC /* EventModel.swift in Sources */,
-				DEC8DE40212B6FA5000AC63F /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
