@@ -12,13 +12,6 @@ import Popover
 
 class MainViewController: UIViewController {
 
-    // メニューボタン押下時のポップアップ開始位置
-    private let startPopoverPoint: CGPoint = {
-        let centerX = UIScreen.main.bounds.width / 2
-        let centerY = DeviceSize.iPhoneXCompatible() ? UIScreen.main.bounds.height - 68.0 : UIScreen.main.bounds.height - 24.0
-        return CGPoint(x: centerX, y: centerY)
-    }()
-
     // セクションごとに分けられたイベントデータを格納する変数
     private var sectionEventLists: [(extended: Bool, event: EventEntity)] = []
 
@@ -84,6 +77,12 @@ class MainViewController: UIViewController {
         let withArrowView = UIView(frame: CGRect(x: 0, y: 0, width: 260, height: 196))
         let reservationMenuContentsView = ReservationMenuContentsView(frame: CGRect(x: 0, y: 0, width: 260, height: 180))
         withArrowView.addSubview(reservationMenuContentsView)
+
+        // メニューボタン押下時のポップアップ開始位置を算出する
+        let safeAreaBottom = UIApplication.shared.keyWindow?.rootViewController?.view.safeAreaInsets.bottom ?? 0
+        let centerX = UIScreen.main.bounds.width / 2
+        let centerY = UIScreen.main.bounds.height - reservationMenuButtonView.frame.height / 2 - safeAreaBottom
+        let startPopoverPoint = CGPoint(x: centerX, y: centerY)
 
         // Popover表示のオプションを設定し表示する
         let options: [PopoverOption] = [
