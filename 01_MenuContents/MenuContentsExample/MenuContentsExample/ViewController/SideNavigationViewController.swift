@@ -45,7 +45,7 @@ class SideNavigationViewController: UIViewController {
 
     // MARK: - Private Function
 
-    // サイドナビゲーションが閉じた状態から左隅のドラッグを行ってコンテンツを開く際の処理
+    // ボタン押下時の処理
     @objc private func sideNavigationButtonTapped(sender: UIButton) {
 
         // それぞれのボタンに関しては、SideNavigationButtonTypeで定義されたボタン種別をtagプロパティに渡している
