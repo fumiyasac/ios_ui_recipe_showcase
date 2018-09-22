@@ -6,8 +6,8 @@ target 'InteractiveUIExample' do
   use_frameworks!
 
   # Pods for InteractiveUIExample
-  pod 'Cosmos'
-  pod 'ActiveLabel'
+  pod 'Cosmos', '17.0.0'
+  pod 'ActiveLabel', :git => 'https://github.com/fumiyasac/ActiveLabel.swift', :branch => 'master'
   pod 'FontAwesome.swift'
 end
 
