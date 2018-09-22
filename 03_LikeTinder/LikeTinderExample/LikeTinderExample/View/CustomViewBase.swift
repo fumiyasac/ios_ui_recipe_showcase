@@ -48,13 +48,13 @@ class CustomViewBase: UIView {
 
         let contentViewConstraintH = NSLayoutConstraint.constraints(
             withVisualFormat: "H:|[view]|",
-            options: NSLayoutFormatOptions(rawValue: 0),
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0),
             metrics: nil,
             views: bindings
         )
         let contentViewConstraintV = NSLayoutConstraint.constraints(
             withVisualFormat: "V:|[view]|",
-            options: NSLayoutFormatOptions(rawValue: 0),
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0),
             metrics: nil,
             views: bindings
         )

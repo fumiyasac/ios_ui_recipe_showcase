@@ -176,7 +176,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     // 配置するUICollectionReusableViewの設定する
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let shouldDisplayHeader = (indexPath.section == 0 && kind == UICollectionElementKindSectionHeader)
+        let shouldDisplayHeader = (indexPath.section == 0 && kind == UICollectionView.elementKindSectionHeader)
         if shouldDisplayHeader {
             let header = collectionView.dequeueReusableCustomHeaderView(with: MainCollectionReusableHeaderView.self, indexPath: indexPath)
             header.newsButtonTappedHandler = {
@@ -226,7 +226,7 @@ extension MainViewController: UINavigationControllerDelegate {
         return targetInteractor.transitionInProgress ? detailInteractor : nil
     }
 
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
 
         // カスタムトランジションのクラスに定義したプロパティへFrame情報とUIImage情報を渡す
         guard let frame = selectedFrame else { return nil }

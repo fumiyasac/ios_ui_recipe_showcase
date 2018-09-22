@@ -37,9 +37,9 @@ class MainViewController: UIViewController {
     private func setupNavigationController() {
         setupNavigationBarTitle("気になる旅行")
 
-        var attributes = [NSAttributedStringKey : Any]()
-        attributes[NSAttributedStringKey.font]             = UIFont(name: "HiraKakuProN-W3", size: 13.0)
-        attributes[NSAttributedStringKey.foregroundColor]  = UIColor.white
+        var attributes = [NSAttributedString.Key : Any]()
+        attributes[NSAttributedString.Key.font]             = UIFont(name: "HiraKakuProN-W3", size: 13.0)
+        attributes[NSAttributedString.Key.foregroundColor]  = UIColor.white
 
         let rightButton = UIBarButtonItem(title: "✨再追加✨", style: .done, target: self, action: #selector(self.refreshButtonTapped))
         rightButton.setTitleTextAttributes(attributes, for: .normal)
@@ -93,7 +93,7 @@ class MainViewController: UIViewController {
 
             // 現在表示されているカードの背面へ新たに作成したカードを追加する
             view.addSubview(itemCardView)
-            view.sendSubview(toBack: itemCardView)
+            view.sendSubviewToBack(itemCardView)
         }
         
         // MEMO: 配列(itemCardViewList)に格納されているViewのうち、先頭にあるViewのみを操作可能にする

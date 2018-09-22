@@ -113,16 +113,16 @@ class FormInputCounterView: CustomViewBase {
 
         // アニメーションの設定を行う
         let transition = CATransition()
-        transition.type = kCATransitionPush
+        transition.type = CATransitionType.push
         transition.duration = 0.16
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
 
         var key: String
         if isIncrement {
-            transition.subtype = kCATransitionFromRight
+            transition.subtype = CATransitionSubtype.fromRight
             key = "next"
         } else {
-            transition.subtype = kCATransitionFromLeft
+            transition.subtype = CATransitionSubtype.fromLeft
             key = "previous"
         }
 

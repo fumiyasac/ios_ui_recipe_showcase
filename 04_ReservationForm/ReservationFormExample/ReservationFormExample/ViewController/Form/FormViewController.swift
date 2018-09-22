@@ -108,10 +108,10 @@ class FormViewController: UIViewController {
     }
 
     // 左右ナビゲーションバーに関するフォントや配色に関する設定
-    private func getAttributeForBarButtonItem() -> [NSAttributedStringKey : Any] {
-        var attributes = [NSAttributedStringKey : Any]()
-        attributes[NSAttributedStringKey.font]             = UIFont(name: "HiraKakuProN-W3", size: 13.0)
-        attributes[NSAttributedStringKey.foregroundColor]  = UIColor.white
+    private func getAttributeForBarButtonItem() -> [NSAttributedString.Key : Any] {
+        var attributes = [NSAttributedString.Key : Any]()
+        attributes[NSAttributedString.Key.font]             = UIFont(name: "HiraKakuProN-W3", size: 13.0)
+        attributes[NSAttributedString.Key.foregroundColor]  = UIColor.white
         return attributes
     }
 
@@ -147,7 +147,7 @@ class FormViewController: UIViewController {
         targetViewControllerLists.append(thirdVC)
 
         // ContainerViewにEmbedしたUIPageViewControllerを取得する
-        for childViewController in childViewControllers {
+        for childViewController in children {
             if let targetPageViewController = childViewController as? UIPageViewController {
                 pageViewController = targetPageViewController
             }

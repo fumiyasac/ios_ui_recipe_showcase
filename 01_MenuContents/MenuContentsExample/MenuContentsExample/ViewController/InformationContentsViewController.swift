@@ -17,17 +17,17 @@ class InformationContentsViewController: UIViewController {
         super.viewDidLoad()
 
         // ナビゲーションバータイトルのデザイン調整を行う
-        var attributes = [NSAttributedStringKey : Any]()
-        attributes[NSAttributedStringKey.font]             = UIFont(name: "HiraKakuProN-W3", size: 14.0)
-        attributes[NSAttributedStringKey.foregroundColor]  = UIColor.black
+        var attributes = [NSAttributedString.Key : Any]()
+        attributes[NSAttributedString.Key.font]             = UIFont(name: "HiraKakuProN-W3", size: 14.0)
+        attributes[NSAttributedString.Key.foregroundColor]  = UIColor.black
 
         self.navigationController!.navigationBar.titleTextAttributes = attributes
         self.navigationItem.title = "お知らせコンテンツの画面"
 
         // メニューボタンを設置のデザイン調整を行う
-        var menuAttributes = [NSAttributedStringKey : Any]()
-        menuAttributes[NSAttributedStringKey.font]            = UIFont(name: "HiraKakuProN-W3", size: 30)
-        menuAttributes[NSAttributedStringKey.foregroundColor] = UIColor.gray
+        var menuAttributes = [NSAttributedString.Key : Any]()
+        menuAttributes[NSAttributedString.Key.font]            = UIFont(name: "HiraKakuProN-W3", size: 30)
+        menuAttributes[NSAttributedString.Key.foregroundColor] = UIColor.gray
 
         menuButton = UIBarButtonItem(title: "≡", style: .plain, target: self, action: #selector(self.menuButtonTapped(sender:)))
         menuButton.setTitleTextAttributes(menuAttributes, for: .normal)

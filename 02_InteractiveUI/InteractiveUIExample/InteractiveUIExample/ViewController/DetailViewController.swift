@@ -176,10 +176,10 @@ class DetailViewController: UIViewController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 5
 
-        var attributes = [NSAttributedStringKey : Any]()
-        attributes[NSAttributedStringKey.paragraphStyle] = paragraphStyle
-        attributes[NSAttributedStringKey.font] = UIFont(name: "HiraKakuProN-W3", size: 12.0)
-        attributes[NSAttributedStringKey.foregroundColor] = UIColor(code: "#777777")
+        var attributes = [NSAttributedString.Key : Any]()
+        attributes[NSAttributedString.Key.paragraphStyle] = paragraphStyle
+        attributes[NSAttributedString.Key.font] = UIFont(name: "HiraKakuProN-W3", size: 12.0)
+        attributes[NSAttributedString.Key.foregroundColor] = UIColor(code: "#777777")
 
         addtionalLinkLabel.enabledTypes  = [.url]
         addtionalLinkLabel.attributedText = NSAttributedString(string: withUrlString, attributes: attributes)

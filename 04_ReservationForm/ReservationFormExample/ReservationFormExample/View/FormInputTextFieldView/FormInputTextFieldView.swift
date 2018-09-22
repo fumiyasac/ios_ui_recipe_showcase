@@ -49,16 +49,16 @@ class FormInputTextFieldView: CustomViewBase {
         var keyboardType: UIKeyboardType
         var contentType: UITextContentType
         switch textFieldType {
-        case .inputName:
+        case .inputName?:
             contentType  = .name
             keyboardType = .default
-        case .inputAddress:
+        case .inputAddress?:
             contentType  = .fullStreetAddress
             keyboardType = .default
-        case .inputTelephone:
+        case .inputTelephone?:
             contentType  = .telephoneNumber
             keyboardType = .numberPad
-        case .inputMailaddress:
+        case .inputMailaddress?:
             contentType  = .emailAddress
             keyboardType = .emailAddress
         default:
