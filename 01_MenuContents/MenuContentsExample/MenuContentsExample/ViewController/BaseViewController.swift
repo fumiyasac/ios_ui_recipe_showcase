@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
 
     // 現在選択されたボタンの種別を持つ（この変数の初期値はSideNavigationButtonType: 0とする）
-    private var selectedButtonType: Int = SideNavigationButtonType.mainContents.rawValue
+    private var selectedButtonType: SideNavigationButtonType = SideNavigationButtonType.mainContents
     
     // サイドナビゲーションの状態
     private var sideNavigationStatus: SideNavigationStatus = .closed
@@ -320,7 +320,7 @@ class BaseViewController: UIViewController {
 extension BaseViewController: SideNavigationButtonDelegate {
 
     // mainContentsContainerで表示するコンテンツないしはURLで表示するページを決める
-    func changeMainContentsContainer(_ buttonType: Int) {
+    func changeMainContentsContainer(_ buttonType: SideNavigationButtonType) {
 
         // SideNavigationButtonDelegateで渡された値が現在表示されている値かどうかを判定する
         let isCurrentDisplay = (selectedButtonType == buttonType)
@@ -329,7 +329,7 @@ extension BaseViewController: SideNavigationButtonDelegate {
         switch buttonType {
 
         // メインコンテンツの場合
-        case SideNavigationButtonType.mainContents.rawValue:
+        case .mainContents:
 
             // 選択中コンテンツのメンバ変数を更新し、isCurrentDisplay = falseなら画面表示を変更する
             selectedButtonType = buttonType
@@ -341,7 +341,7 @@ extension BaseViewController: SideNavigationButtonDelegate {
             break
 
         // お知らせコンテンツの場合
-        case SideNavigationButtonType.informationContents.rawValue:
+        case .informationContents:
 
             // 選択中コンテンツのメンバ変数を更新し、isCurrentDisplay = falseなら画面表示を変更する
             selectedButtonType = buttonType
@@ -353,7 +353,7 @@ extension BaseViewController: SideNavigationButtonDelegate {
             break
 
         // Qiitaのページの場合
-        case SideNavigationButtonType.qiitaWebPage.rawValue:
+        case .qiitaWebPage:
 
             // Qiitaのページを表示する
             executeSideCloseAnimation(withCompletion: {
@@ -362,15 +362,12 @@ extension BaseViewController: SideNavigationButtonDelegate {
             break
 
         // Slideshareのページの場合
-        case SideNavigationButtonType.slideshareWebPage.rawValue:
+        case .slideshareWebPage:
 
             // Slideshareのページを表示する
             executeSideCloseAnimation(withCompletion: {
                 self.showSlideshareWebPage()
             })
-            break
-
-        default:
             break
         }
     }

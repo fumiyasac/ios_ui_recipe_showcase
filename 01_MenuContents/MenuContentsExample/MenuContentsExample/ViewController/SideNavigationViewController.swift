@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SideNavigationButtonDelegate: NSObjectProtocol {
-    func changeMainContentsContainer(_ buttonType: Int)
+    func changeMainContentsContainer(_ buttonType: SideNavigationButtonType)
 }
 
 class SideNavigationViewController: UIViewController {
@@ -50,6 +50,6 @@ class SideNavigationViewController: UIViewController {
 
         // それぞれのボタンに関しては、SideNavigationButtonTypeで定義されたボタン種別をtagプロパティに渡している
         let selectedButtonType = sender.tag
-        self.delegate?.changeMainContentsContainer(selectedButtonType)
+        self.delegate?.changeMainContentsContainer(SideNavigationButtonType(rawValue: selectedButtonType)!)
     }
 }
