@@ -5,7 +5,7 @@ PODS:
 
 DEPENDENCIES:
   - ActiveLabel
-  - Cosmos (= 17.0.0)
+  - Cosmos
   - FontAwesome.swift
 
 SPEC REPOS:
@@ -19,6 +19,6 @@ SPEC CHECKSUMS:
   Cosmos: 309e489f21ffc91a1eeecfebef7f817cd2fcfba6
   FontAwesome.swift: 4b9ba1e1f3418a626f3ab67b230856ab6eb4860f
 
-PODFILE CHECKSUM: 4cd01f96e95170ed1f41c54333ef44dffe5a34c3
+PODFILE CHECKSUM: 888ce8ed217251a0c3f2a6e1fc53f087a2e60570
 
 COCOAPODS: 1.5.3
