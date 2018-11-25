@@ -7,7 +7,7 @@ target 'InteractiveUIExample' do
 
   # Pods for InteractiveUIExample
   pod 'Cosmos', '17.0.0'
-  pod 'ActiveLabel', :git => 'https://github.com/fumiyasac/ActiveLabel.swift', :branch => 'master'
+  pod 'ActiveLabel'
   pod 'FontAwesome.swift'
 end
 
