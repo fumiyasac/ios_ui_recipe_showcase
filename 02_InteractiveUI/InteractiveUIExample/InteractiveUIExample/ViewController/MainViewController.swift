@@ -238,10 +238,10 @@ extension MainViewController: UINavigationControllerDelegate {
         switch operation {
         case .push:
             self.detailInteractor = DetailInteractor(attachTo: toVC)
-            detailTransition.presenting  = true
+            detailTransition.presenting = true
             return detailTransition
         default:
-            detailTransition.presenting  = false
+            detailTransition.presenting = false
             return detailTransition
         }
     }
