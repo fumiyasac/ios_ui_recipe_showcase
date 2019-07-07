@@ -28,12 +28,12 @@ extension UICollectionView {
 
     // 作成した独自のカスタムヘッダー用のViewを初期化するメソッド
     func registerCustomReusableHeaderView<T: UICollectionReusableView>(_ viewType: T.Type) {
-        register(UINib(nibName: T.identifier, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader ,withReuseIdentifier: T.identifier)
+        register(UINib(nibName: T.identifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader ,withReuseIdentifier: T.identifier)
     }
 
     // 作成した独自のカスタムフッター用のViewを初期化するメソッド
     func registerCustomReusableFooterView<T: UICollectionReusableView>(_ viewType: T.Type) {
-        register(UINib(nibName: T.identifier, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter ,withReuseIdentifier: T.identifier)
+        register(UINib(nibName: T.identifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter ,withReuseIdentifier: T.identifier)
     }
 
     // 作成した独自のカスタムセルをインスタンス化するメソッド
@@ -43,11 +43,11 @@ extension UICollectionView {
 
     // 作成した独自のカスタムヘッダー用のViewをインスタンス化するメソッド
     func dequeueReusableCustomHeaderView<T: UICollectionReusableView>(with cellType: T.Type, indexPath: IndexPath) -> T {
-        return dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: T.identifier, for: indexPath) as! T
+        return dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: T.identifier, for: indexPath) as! T
     }
 
     // 作成した独自のカスタムフッター用のViewをインスタンス化するメソッド
     func dequeueReusableCustomFooterView<T: UICollectionReusableView>(with cellType: T.Type, indexPath: IndexPath) -> T {
-        return dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: T.identifier, for: indexPath) as! T
+        return dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: T.identifier, for: indexPath) as! T
     }
 }

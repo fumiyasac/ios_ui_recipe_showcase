@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-InteractiveUIExample/Pods-InteractiveUIExample-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ActiveLabel/ActiveLabel.framework
+${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework
+${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework

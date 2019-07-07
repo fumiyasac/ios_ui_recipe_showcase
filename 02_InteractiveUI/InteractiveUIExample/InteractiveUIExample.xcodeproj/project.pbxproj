@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -362,13 +362,16 @@
 				TargetAttributes = {
 					DE24E674211CDD15005637A1 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1020;
 					};
 					DE24E688211CDD1B005637A1 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = DE24E674211CDD15005637A1;
 					};
 					DE24E693211CDD1B005637A1 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = DE24E674211CDD15005637A1;
 					};
 				};
@@ -431,21 +434,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-InteractiveUIExample/Pods-InteractiveUIExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ActiveLabel/ActiveLabel.framework",
-				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
-				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InteractiveUIExample/Pods-InteractiveUIExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActiveLabel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InteractiveUIExample/Pods-InteractiveUIExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InteractiveUIExample/Pods-InteractiveUIExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InteractiveUIExample/Pods-InteractiveUIExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0DBDFFC408A7DF6D43E45B4 /* [CP] Check Pods Manifest.lock */ = {
@@ -689,7 +687,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.InteractiveUIExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -708,7 +706,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.InteractiveUIExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -728,7 +726,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.InteractiveUIExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InteractiveUIExample.app/InteractiveUIExample";
 			};
@@ -749,7 +747,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.InteractiveUIExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InteractiveUIExample.app/InteractiveUIExample";
 			};
@@ -769,7 +767,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.InteractiveUIExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = InteractiveUIExample;
 			};
@@ -789,7 +787,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.InteractiveUIExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = InteractiveUIExample;
 			};

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2FAF0EFB26F0B57F93F98FD82AA2E74E"
+               BlueprintIdentifier = "71E9E4CF5B499AC4EB9999FB2F80B8CA"
+               BuildableName = "KYNavigationProgress.framework"
                BlueprintName = "KYNavigationProgress"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "KYNavigationProgress.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

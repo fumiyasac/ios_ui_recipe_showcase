@@ -185,7 +185,7 @@ class BaseViewController: UIViewController {
          * 境界値(x座標: 160)のところで開閉状態を決める
          * ボタンエリアが開いた時の位置から変わらない時(x座標: 260)または境界値より前ではコンテンツを閉じる
          */
-        if sender.state == UIGestureRecognizerState.ended {
+        if sender.state == UIGestureRecognizer.State.ended {
             if mainContentsContainer.frame.origin.x < 160 {
                 changeContainerSettingWithAnimation(.closed)
             } else {
@@ -289,16 +289,16 @@ class BaseViewController: UIViewController {
     private func displayMainContentsViewController() {
         if let vc = UIStoryboard(name: "MainContents", bundle: nil).instantiateInitialViewController() {
             mainContentsContainer.addSubview(vc.view)
-            self.addChildViewController(vc)
-            vc.didMove(toParentViewController: self)
+            self.addChild(vc)
+            vc.didMove(toParent: self)
         }
     }
 
     private func displayInformationContentsViewController() {
         if let vc = UIStoryboard(name: "InformationContents", bundle: nil).instantiateInitialViewController() {
             mainContentsContainer.addSubview(vc.view)
-            self.addChildViewController(vc)
-            vc.didMove(toParentViewController: self)
+            self.addChild(vc)
+            vc.didMove(toParent: self)
         }
     }
 

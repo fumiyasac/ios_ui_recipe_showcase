@@ -29,11 +29,11 @@ class FormContentsSecondViewController: UIViewController {
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardWillBeShown(_:)),
-                                               name: Notification.Name.UIKeyboardWillShow,
+                                               name: UIResponder.keyboardWillShowNotification,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardWillBeHidden(_:)),
-                                               name: Notification.Name.UIKeyboardWillHide,
+                                               name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
     }
 
@@ -55,10 +55,10 @@ class FormContentsSecondViewController: UIViewController {
         guard let userInfo = notification.userInfo as? [String : Any] else {
             return
         }
-        guard let keyboardInfo = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else {
+        guard let keyboardInfo = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
             return
         }
-        guard let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double else {
+        guard let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {
             return
         }
         let keyboardSize = keyboardInfo.cgRectValue.size
@@ -75,7 +75,7 @@ class FormContentsSecondViewController: UIViewController {
         guard let userInfo = notification.userInfo as? [String : Any] else {
             return
         }
-        guard let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double else {
+        guard let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {
             return
         }
         UIView.animate(withDuration: duration, animations: {

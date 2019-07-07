@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FOf-hl-3Fb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FOf-hl-3Fb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -150,9 +149,9 @@
                                                     <constraint firstAttribute="trailing" secondItem="1Xb-DZ-QSt" secondAttribute="trailing" constant="16" id="ELP-gS-buP"/>
                                                     <constraint firstAttribute="trailing" secondItem="pnZ-qX-wuM" secondAttribute="trailing" constant="16" id="FAp-tD-mi5"/>
                                                     <constraint firstItem="pSg-CW-MiF" firstAttribute="top" secondItem="pnZ-qX-wuM" secondAttribute="bottom" constant="14" id="HJO-ok-ibL"/>
+                                                    <constraint firstItem="1Xb-DZ-QSt" firstAttribute="top" secondItem="pSg-CW-MiF" secondAttribute="bottom" constant="13.5" id="Jj1-hK-zaS"/>
                                                     <constraint firstAttribute="height" constant="200" id="KIR-yH-8M6"/>
                                                     <constraint firstAttribute="trailing" secondItem="pSg-CW-MiF" secondAttribute="trailing" constant="16" id="Pqo-Pm-NGK"/>
-                                                    <constraint firstItem="1Xb-DZ-QSt" firstAttribute="top" secondItem="pSg-CW-MiF" secondAttribute="bottom" constant="14" id="Qp4-Bl-0li"/>
                                                     <constraint firstItem="pSg-CW-MiF" firstAttribute="leading" secondItem="gJx-Uy-yuC" secondAttribute="leading" constant="16" id="Sw4-je-yEe"/>
                                                     <constraint firstItem="gjl-O3-GQ0" firstAttribute="top" secondItem="gJx-Uy-yuC" secondAttribute="top" constant="14" id="cUz-29-mc5"/>
                                                     <constraint firstAttribute="trailing" secondItem="gjl-O3-GQ0" secondAttribute="trailing" constant="16" id="j6c-b6-53G"/>

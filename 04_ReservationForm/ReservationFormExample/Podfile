@@ -11,9 +11,22 @@ target 'ReservationFormExample' do
   pod 'FontAwesome.swift'
 end
 
-post_install do |installer|
-  installer.pods_project.build_configurations.each do |config|
-    config.build_settings.delete('CODE_SIGNING_ALLOWED')
-    config.build_settings.delete('CODE_SIGNING_REQUIRED')
+post_install do |installer|  
+  installer.pods_project.targets.each do |target|
+
+    # KYNavigationProgressのSwiftバージョンは4.0へ固定
+    if ['KYNavigationProgress'].include? target.name
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '4.0'
+      end
+    end
+
+    # PopoverのSwiftバージョンは4.2へ固定
+    if ['Popover'].include? target.name
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '4.2'
+      end
+    end
+
   end
 end

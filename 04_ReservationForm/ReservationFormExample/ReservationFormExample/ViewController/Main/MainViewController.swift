@@ -55,7 +55,7 @@ class MainViewController: UIViewController {
         eventTableView.delegate           = self
         eventTableView.dataSource         = self
         eventTableView.estimatedRowHeight = 260.0
-        eventTableView.rowHeight = UITableViewAutomaticDimension
+        eventTableView.rowHeight = UITableView.automaticDimension
         eventTableView.delaysContentTouches = false
         eventTableView.registerCustomCell(EventTableViewCell.self)
 

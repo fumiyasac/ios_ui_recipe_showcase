@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-ReservationFormExample/Pods-ReservationFormExample-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework
+${BUILT_PRODUCTS_DIR}/KYNavigationProgress/KYNavigationProgress.framework
+${BUILT_PRODUCTS_DIR}/Popover/Popover.framework

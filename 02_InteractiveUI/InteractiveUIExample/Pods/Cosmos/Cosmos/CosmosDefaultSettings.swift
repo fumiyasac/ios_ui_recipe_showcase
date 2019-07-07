@@ -78,7 +78,7 @@ struct CosmosDefaultSettings {
   static let textColor = UIColor(red: 127/255, green: 127/255, blue: 127/255, alpha: 1)
   
   /// Font for the text.
-  static let textFont = UIFont.preferredFont(forTextStyle: UIFontTextStyle.footnote)
+  static let textFont = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.footnote)
   
   /// Distance between the text and the stars.
   static let textMargin: Double = 5
@@ -96,6 +96,9 @@ struct CosmosDefaultSettings {
 
   /// The lowest rating that user can set by touching the stars.
   static let minTouchRating: Double = 1
+  
+  /// Set to `false` if you don't want to pass touches to superview (can be useful in a table view).
+  static let passTouchesToSuperview = true
   
   /// When `true` the star fill level is updated when user touches the cosmos view. When `false` the Cosmos view only shows the rating and does not act as the input control.
   static let updateOnTouch = true

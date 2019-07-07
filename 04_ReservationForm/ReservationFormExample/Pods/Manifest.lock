@@ -1,7 +1,7 @@
 PODS:
-  - FontAwesome.swift (1.4.3)
+  - FontAwesome.swift (1.7.1)
   - KYNavigationProgress (2.0.2)
-  - Popover (1.2.0)
+  - Popover (1.2.2)
 
 DEPENDENCIES:
   - FontAwesome.swift
@@ -15,10 +15,10 @@ SPEC REPOS:
     - Popover
 
 SPEC CHECKSUMS:
-  FontAwesome.swift: 4b9ba1e1f3418a626f3ab67b230856ab6eb4860f
+  FontAwesome.swift: 8d9792fa2d2347055da35bd97752b3960bd75952
   KYNavigationProgress: a380f5016e898ea4577049cf7b41895ed2a8da5a
-  Popover: 28c1ac8e937ab2b3965bd2da7dd18324357abc41
+  Popover: 21e357f86d45c8d9e29a41a4adbca3664d6e511f
 
-PODFILE CHECKSUM: 8be9e7131a4926badedb5c4fced785ee597d5372
+PODFILE CHECKSUM: cf6c2cabe8badcde4425e051152d753cbd754cab
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.2

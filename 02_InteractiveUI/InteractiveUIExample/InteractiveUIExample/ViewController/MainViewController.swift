@@ -176,7 +176,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     // 配置するUICollectionReusableViewの設定する
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let shouldDisplayHeader = (indexPath.section == 0 && kind == UICollectionElementKindSectionHeader)
+        let shouldDisplayHeader = (indexPath.section == 0 && kind == UICollectionView.elementKindSectionHeader)
         if shouldDisplayHeader {
             let header = collectionView.dequeueReusableCustomHeaderView(with: MainCollectionReusableHeaderView.self, indexPath: indexPath)
             header.newsButtonTappedHandler = {
@@ -211,7 +211,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     }
 
     // セル内のアイテム間の余白(margin)調整を行う
-    internal func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let margin = MainCollectionViewCell.cellMargin
         return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
     }
@@ -226,7 +226,7 @@ extension MainViewController: UINavigationControllerDelegate {
         return targetInteractor.transitionInProgress ? detailInteractor : nil
     }
 
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
 
         // カスタムトランジションのクラスに定義したプロパティへFrame情報とUIImage情報を渡す
         guard let frame = selectedFrame else { return nil }
@@ -238,10 +238,10 @@ extension MainViewController: UINavigationControllerDelegate {
         switch operation {
         case .push:
             self.detailInteractor = DetailInteractor(attachTo: toVC)
-            detailTransition.presenting  = true
+            detailTransition.presenting = true
             return detailTransition
         default:
-            detailTransition.presenting  = false
+            detailTransition.presenting = false
             return detailTransition
         }
     }

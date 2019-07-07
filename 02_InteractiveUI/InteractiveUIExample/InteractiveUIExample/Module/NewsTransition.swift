@@ -77,7 +77,7 @@ extension NewsTransition: UIViewControllerAnimatedTransitioning {
         // アニメーションの実体となるContainerViewに必要なものを追加する
         containerView.addSubview(fromView)
         containerView.addSubview(toView)
-        containerView.bringSubview(toFront: targetView)
+        containerView.bringSubviewToFront(targetView)
 
         UIView.animate(withDuration: duration, delay: 0.00, options: [.curveEaseOut], animations: {
 
