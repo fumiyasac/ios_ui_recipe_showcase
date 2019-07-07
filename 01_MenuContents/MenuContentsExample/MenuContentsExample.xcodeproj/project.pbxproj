@@ -246,16 +246,16 @@
 				TargetAttributes = {
 					DEDFA29921190E7F00B6296E = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					DEDFA2AD21190E8200B6296E = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = DEDFA29921190E7F00B6296E;
 					};
 					DEDFA2B821190E8200B6296E = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = DEDFA29921190E7F00B6296E;
 					};
 				};
@@ -518,7 +518,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.MenuContentsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -536,7 +536,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.MenuContentsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -556,7 +556,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.MenuContentsExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MenuContentsExample.app/MenuContentsExample";
 			};
@@ -577,7 +577,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.MenuContentsExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MenuContentsExample.app/MenuContentsExample";
 			};
@@ -597,7 +597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.MenuContentsExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MenuContentsExample;
 			};
@@ -617,7 +617,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.MenuContentsExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MenuContentsExample;
 			};

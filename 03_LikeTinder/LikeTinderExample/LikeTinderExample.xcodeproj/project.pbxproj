@@ -279,16 +279,16 @@
 				TargetAttributes = {
 					DE14A470212807EF000C2F3D = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					DE14A484212807F2000C2F3D = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = DE14A470212807EF000C2F3D;
 					};
 					DE14A48F212807F2000C2F3D = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = DE14A470212807EF000C2F3D;
 					};
 				};
@@ -538,7 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.LikeTinderExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -556,7 +556,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.LikeTinderExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -576,7 +576,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.LikeTinderExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LikeTinderExample.app/LikeTinderExample";
 			};
@@ -597,7 +597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.LikeTinderExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LikeTinderExample.app/LikeTinderExample";
 			};
@@ -617,7 +617,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.LikeTinderExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LikeTinderExample;
 			};
@@ -637,7 +637,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.LikeTinderExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LikeTinderExample;
 			};

@@ -191,7 +191,7 @@ extension FormViewController: UIPageViewControllerDelegate, UIPageViewController
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
 
         // インデックスを取得する
-        guard let index = targetViewControllerLists.index(of: viewController) else {
+        guard let index = targetViewControllerLists.firstIndex(of: viewController) else {
             return nil
         }
 
@@ -207,7 +207,7 @@ extension FormViewController: UIPageViewControllerDelegate, UIPageViewController
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
 
         // インデックスを取得する
-        guard let index = targetViewControllerLists.index(of: viewController) else {
+        guard let index = targetViewControllerLists.firstIndex(of: viewController) else {
             return nil
         }
 
