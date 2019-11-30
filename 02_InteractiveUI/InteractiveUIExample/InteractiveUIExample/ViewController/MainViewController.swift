@@ -187,6 +187,12 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 
                 let navigationController = UINavigationController(rootViewController: newsViewController)
                 navigationController.transitioningDelegate = self
+
+                // MEMO: iOS13以降のPresent/Dismiss時の調整
+                // Present/Dismissで実行するカスタムトランジションの場合ではこの設定を忘れると画面遷移がおかしくなるので注意
+                if #available(iOS 13.0, *) {
+                    navigationController.modalPresentationStyle = .fullScreen
+                }
                 self.present(navigationController, animated: true, completion: nil)
             }
             return header

@@ -1,7 +1,7 @@
 PODS:
   - ActiveLabel (1.1.0)
-  - Cosmos (19.0.3)
-  - FontAwesome.swift (1.7.1)
+  - Cosmos (20.0.1)
+  - FontAwesome.swift (1.8.2)
 
 DEPENDENCIES:
   - ActiveLabel
@@ -9,16 +9,16 @@ DEPENDENCIES:
   - FontAwesome.swift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - ActiveLabel
     - Cosmos
     - FontAwesome.swift
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
-  Cosmos: a6fb17284281fa12cf4c85c2efecd440a215ec44
-  FontAwesome.swift: 8d9792fa2d2347055da35bd97752b3960bd75952
+  Cosmos: b47fddf2102bb48580cd3025d9ce0a5c658a65da
+  FontAwesome.swift: 7938d6a03113ff3f39001bde7f50be8a0903d605
 
 PODFILE CHECKSUM: 9cae3c5f406d7fa05cb36aad3aa122b28c3e7f7e
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.8.4

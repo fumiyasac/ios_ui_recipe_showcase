@@ -38,12 +38,12 @@ __⭐️第4章サンプル:__
 
 __【お知らせ: サンプルのバージョンアップ対応について】__
 
-2019.07.11時点での収録サンプルのリポジトリに関しては下記のバージョンで実装したものになっております。
+2019.12.01時点での収録サンプルのリポジトリに関しては下記のバージョンで実装したものになっております。
 
-+ macOS Mojave 10.14.4
-+ Xcode 10.2.1
-+ Swift 5.0.1
-+ CocoaPods 1.7.2
++ macOS Catalina 10.15.1
++ Xcode 11.1
++ Swift 5.1
++ CocoaPods 1.8.4
 
 __【Podfileの記載変更について】__
 
@@ -104,3 +104,10 @@ guard let index = targetViewControllerLists.index(of: viewController) else {
 ◉ After:
 guard let index = targetViewControllerLists.firstIndex(of: viewController) else {
 ```
+
+__【iOS13 & Xcode11.1へのバージョンアップにおいてこのサンプルで触れていない部分】__
+
+本サンプルでは下記の部分に関しては、今回は対応していませんのでご注意下さい。
+
++ DarkModeの無効化（現在は強制的にLightModeにしています。）
++ SceneDelegateは利用しない従来のAppDelegateの利用（現状は挙動に問題はありませんが非推奨です。）
