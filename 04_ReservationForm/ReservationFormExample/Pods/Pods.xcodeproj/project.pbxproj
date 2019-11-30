@@ -491,6 +491,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = EBE6A16ECEBFB00730A7E295EA1EC910 /* Products */;
@@ -703,22 +704,6 @@
 			};
 			name = Release;
 		};
-		0D55D58CB3BF58392F364A398DA89209 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3AEE1FB3363D72E1943E3B76D768BE08 /* FontAwesome.swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FontAwesome.swift";
-				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/ResourceBundle-FontAwesome.swift-FontAwesome.swift-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = FontAwesome.swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		2C124DF7A47209A316F7950254079AAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3AEE1FB3363D72E1943E3B76D768BE08 /* FontAwesome.swift.xcconfig */;
@@ -850,6 +835,23 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		438109E1802BB2291C9A0BB8FE9DC07D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AEE1FB3363D72E1943E3B76D768BE08 /* FontAwesome.swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FontAwesome.swift";
+				IBSC_MODULE = FontAwesome_swift;
+				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/ResourceBundle-FontAwesome.swift-FontAwesome.swift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = FontAwesome.swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
 		};
 		5357E50EDB9C9D1CD78296927CB793FB /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1027,12 +1029,13 @@
 			};
 			name = Debug;
 		};
-		DE373C0A0C90FF7FC6D3657592A3F4A3 /* Release */ = {
+		D9BA2525D3A5887E6378C9733563CB55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3AEE1FB3363D72E1943E3B76D768BE08 /* FontAwesome.swift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FontAwesome.swift";
+				IBSC_MODULE = FontAwesome_swift;
 				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/ResourceBundle-FontAwesome.swift-FontAwesome.swift-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = FontAwesome.swift;
@@ -1084,8 +1087,8 @@
 		162CE2CC222588C47F9D8623AC2D740C /* Build configuration list for PBXNativeTarget "FontAwesome.swift-FontAwesome.swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0D55D58CB3BF58392F364A398DA89209 /* Debug */,
-				DE373C0A0C90FF7FC6D3657592A3F4A3 /* Release */,
+				438109E1802BB2291C9A0BB8FE9DC07D /* Debug */,
+				D9BA2525D3A5887E6378C9733563CB55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
