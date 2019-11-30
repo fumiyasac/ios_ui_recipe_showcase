@@ -104,3 +104,10 @@ guard let index = targetViewControllerLists.index(of: viewController) else {
 ◉ After:
 guard let index = targetViewControllerLists.firstIndex(of: viewController) else {
 ```
+
+__【iOS13 & Xcode11.1へのバージョンアップにおいてこのサンプルで触れていない部分】__
+
+本サンプルでは下記の部分に関しては、今回は対応していませんのでご注意下さい。
+
++ DarkModeの無効化（現在は強制的にLightModeにしています。）
++ SceneDelegateは利用しない従来のAppDelegateの利用（現状は挙動に問題はありませんが非推奨です。）
