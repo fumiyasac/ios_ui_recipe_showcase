@@ -38,12 +38,12 @@ __⭐️第4章サンプル:__
 
 __【お知らせ: サンプルのバージョンアップ対応について】__
 
-2019.12.01時点での収録サンプルのリポジトリに関しては下記のバージョンで実装したものになっております。
+2020.12.13時点での収録サンプルのリポジトリに関しては下記のバージョンで実装したものになっております。
 
-+ macOS Catalina 10.15.1
-+ Xcode 11.1
-+ Swift 5.1
-+ CocoaPods 1.8.4
++ macOS Big Sur 11.0.1
++ Xcode 12.2
++ Swift 5.3
++ CocoaPods 1.10.0
 
 __【Podfileの記載変更について】__
 
@@ -78,12 +78,6 @@ post_install do |installer|
     if ['KYNavigationProgress'].include? target.name
       target.build_configurations.each do |config|
         config.build_settings['SWIFT_VERSION'] = '4.0'
-      end
-    end
-    # PopoverのSwiftバージョンは4.2へ固定
-    if ['Popover'].include? target.name
-      target.build_configurations.each do |config|
-        config.build_settings['SWIFT_VERSION'] = '4.2'
       end
     end
   end
