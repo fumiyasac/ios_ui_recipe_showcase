@@ -97,13 +97,6 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
-		DE24E658211C1D53005637A1 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
 		DEDFA29121190E7F00B6296E = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +124,6 @@
 				DEDFA29D21190E7F00B6296E /* AppDelegate.swift */,
 				DEDFA2A421190E8200B6296E /* Assets.xcassets */,
 				DE24E657211C1D1B005637A1 /* Enum */,
-				DE24E658211C1D53005637A1 /* Modules */,
 				DEDFA2CC21190EA400B6296E /* Storyboard */,
 				DEDFA2CB21190E9200B6296E /* ViewController */,
 			);
