@@ -52,7 +52,7 @@ SOFTWARE.
 
 ## Popover
 
-Copyright (c) 2017 corin8823 <yusuke_takahashi@cyberagent.co.jp>
+Copyright (c) 2020 corin8823 <yusuke_takahashi@cyberagent.co.jp>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

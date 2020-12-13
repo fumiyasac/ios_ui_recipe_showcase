@@ -98,7 +98,7 @@ class FormContentsFirstViewController: UIViewController {
     private func setupFormScrollView() {
         formScrollView.delaysContentTouches = false
 
-        // MEMO: UIScrollViewとFiestResponderの処理を共存させる場合の処理
+        // MEMO: UIScrollViewとFirstResponderの処理を共存させる場合の処理
         let tapGestureForScrollView = UITapGestureRecognizer(target: self, action: #selector(self.formScrollViewTapped(sender:)))
         formScrollView.addGestureRecognizer(tapGestureForScrollView)
     }
@@ -138,7 +138,7 @@ extension FormContentsFirstViewController: FormInputTextFieldDelegate {
             FormDataStore.shared.name = text
 
             // Debug.
-            print("入力された名前:", FormDataStore.shared.name)
+            //print("入力された名前:", FormDataStore.shared.name)
         }
     }
 }
