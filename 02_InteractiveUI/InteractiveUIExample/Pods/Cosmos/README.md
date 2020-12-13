@@ -32,7 +32,7 @@ Thanks to Alex Nagy from [rebeloper.com](https://rebeloper.com/) for creating th
 
 ## Setup
 
-There are three ways you can add Cosmos to your Xcode project.
+There are various ways you can add Cosmos to your Xcode project.
 
 #### Add source (iOS 8+)
 
@@ -40,7 +40,7 @@ Simply add [CosmosDistrib.swift](https://github.com/evgenyneu/Cosmos/blob/master
 
 #### Setup with Carthage (iOS 8+)
 
-Alternatively, add `github "evgenyneu/Cosmos" ~> 20.0` to your Cartfile and run `carthage update`.
+Alternatively, add `github "evgenyneu/Cosmos" ~> 23.0` to your Cartfile and run `carthage update`.
 
 #### Setup with CocoaPods (iOS 8+)
 
@@ -48,18 +48,13 @@ If you are using CocoaPods add this text to your Podfile and run `pod install`.
 
     use_frameworks!
     target 'Your target name'
-    pod 'Cosmos', '~> 20.0'
+    pod 'Cosmos', '~> 23.0'
 
 
 #### Setup with Swift Package Manager
 
-If you are using [Swift Package Manager](https://swift.org/package-manager/) add the following line:
-
-```swift
-.package(url: "https://github.com/evgenyneu/Cosmos.git", from: "20.0.0")
-```
-
-to the `dependencies` value of your `Package.swift` file and run `swift package resolve`.
+* In Xcode 11+ select *File > Packages > Add Package Dependency...*.
+* Enter this project's URL: https://github.com/evgenyneu/Cosmos.git
 
 
 #### Legacy Swift versions
@@ -76,7 +71,7 @@ Setup a [previous version](https://github.com/evgenyneu/Cosmos/wiki/Legacy-Swift
 <img src='https://raw.githubusercontent.com/evgenyneu/Cosmos/master/graphics/Screenshots/cosmos_ios_view_control_attributes_inspector.png' width='256' alt='Add view control in attributes inspector'>
 
 
-2) Set the view's class to `CosmosView` in the *Identity Inspector*. Set its *module* property to `Cosmos` if you used Carthage or CocoaPods setup methods.
+2) Set the view's class to `CosmosView` in the *Identity Inspector*. Set its *module* property to `Cosmos`, unless you used the file setup method.
 
 
 <img src='https://raw.githubusercontent.com/evgenyneu/Cosmos/master/graphics/Screenshots/cosmos_storyboard_class_3.png' width='259' alt='Add Cosmos rating view to the storyboard'>
@@ -96,7 +91,7 @@ One can position the Cosmos view using Auto Layout constaints. The width and hei
 
 ## Using Cosmos in code
 
-Add `import Cosmos` to your source code if you used Carthage or CocoaPods setup methods.
+Add `import Cosmos` to your source code, unless you used the file setup method.
 
 You can style and control Cosmos view from your code by creating an outlet in your view controller. Alternatively, one can  instantiate `CosmosView` class and add it to the view manually without using Storyboard.
 
@@ -178,6 +173,11 @@ Images for the golden star used in the demo app are available in [here](https://
 [Here](https://github.com/evgenyneu/Cosmos/wiki/Using-Cosmos-in-a-scroll-view) is how to use Cosmos in a scroll view or a table view.
 
 
+## Using Cosmos with SwiftUI
+
+[Here](https://github.com/evgenyneu/Cosmos/wiki/Using-Cosmos-with-SwiftUI) is how to show a Cosmos view with SwiftUI.
+
+
 ## Using Cosmos in a modal screen
 
 iOS 13 introduced swiping gesture for closing modal screens, which [prevents Cosmos from working properly](https://github.com/evgenyneu/Cosmos/issues/148). The following setting fixes this problem:
@@ -237,6 +237,7 @@ We would like to thank the following people for their valuable contributions.
 * [yuravake](https://github.com/yuravake) for adding `passTouchesToSuperview` setting.
 * [gcharita](https://github.com/gcharita) for adding Swift Package Manager support.
 * [benpackard](https://github.com/benpackard) for fixing Cosmos when used in a modal screen on iOS 13.
+* [dkk](https://github.com/dkk) for the dark mode update.
 
 
 
