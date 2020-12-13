@@ -304,14 +304,40 @@ class BaseViewController: UIViewController {
 
     private func showQiitaWebPage() {
         if let qiitaUrl = URL(string: "https://qiita.com/fumiyasac@github/items/eb5b17ab90f5aa27b793") {
-            UIApplication.shared.open(qiitaUrl, options: [:])
+            if UIApplication.shared.canOpenURL(qiitaUrl) {
+                UIApplication.shared.open(qiitaUrl, options: [:])
+            } else {
+                showAlertWith(completionHandler: nil)
+            }
         }
     }
 
     private func showSlideshareWebPage() {
         if let slideshareNewsUrl = URL(string: "http://www.slideshare.net/fumiyasakai37/uikitdiypart1") {
-            UIApplication.shared.open(slideshareNewsUrl, options: [:])
+            if UIApplication.shared.canOpenURL(slideshareNewsUrl) {
+                UIApplication.shared.open(slideshareNewsUrl, options: [:])
+            } else {
+                showAlertWith(completionHandler: nil)
+            }
         }
+    }
+
+    // MEMO: iOS14からSafari以外のブラウザをデフォルトに変更することが可能です。
+    // その場合には「LSApplicationQueriesSchemes」の設定をしないとcanOpenURLでfalseになってしまいます。
+    // ※ 詳細はInfo.plistを参照
+    // 確認したSafari以外のブラウザは下記の通りになります。
+    // - Google Chrome / Smooz
+    private func showAlertWith(completionHandler: (() -> ())? = nil) {
+        let alert = UIAlertController(
+            title: "リンクを開くことができませんでした。",
+            message: "アプリ内部の設定が誤っている可能性があります。",
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+            completionHandler?()
+        })
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
