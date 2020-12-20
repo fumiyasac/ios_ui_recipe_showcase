@@ -326,7 +326,7 @@ class BaseViewController: UIViewController {
     // その場合には「LSApplicationQueriesSchemes」の設定をしないとcanOpenURLでfalseになってしまいます。
     // ※ 詳細はInfo.plistを参照
     // 確認したSafari以外のブラウザは下記の通りになります。
-    // - Google Chrome / Smooz
+    // 検証ブラウザ: Google Chrome / Opera / Microsoft Edge / Firefox
     private func showAlertWith(completionHandler: (() -> ())? = nil) {
         let alert = UIAlertController(
             title: "リンクを開くことができませんでした。",
