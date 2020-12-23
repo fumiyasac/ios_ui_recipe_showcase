@@ -184,8 +184,30 @@ class DetailViewController: UIViewController {
         addtionalLinkLabel.enabledTypes  = [.url]
         addtionalLinkLabel.attributedText = NSAttributedString(string: withUrlString, attributes: attributes)
         addtionalLinkLabel.handleURLTap { url in
-            UIApplication.shared.open(url, options: [:])
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:])
+            } else {
+                self.showAlertWith(completionHandler: nil)
+            }
         }
+    }
+
+    // MEMO: iOS14からSafari以外のブラウザをデフォルトに変更することが可能です。
+    // その場合には「LSApplicationQueriesSchemes」の設定をしないとcanOpenURLでfalseになってしまいます。
+    // ※ 詳細はInfo.plistを参照
+    // 確認したSafari以外のブラウザは下記の通りになります。
+    // 検証ブラウザ: Google Chrome / Opera / Microsoft Edge / Firefox
+    private func showAlertWith(completionHandler: (() -> ())? = nil) {
+        let alert = UIAlertController(
+            title: "リンクを開くことができませんでした。",
+            message: "アプリ内部の設定が誤っている可能性があります。",
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+            completionHandler?()
+        })
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
