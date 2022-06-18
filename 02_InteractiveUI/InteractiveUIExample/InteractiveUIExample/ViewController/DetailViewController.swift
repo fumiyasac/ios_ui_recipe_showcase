@@ -67,9 +67,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // NavigationControllerのカスタマイズを行う(ナビゲーションを透明にする)
-        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController!.navigationBar.shadowImage = UIImage()
-        self.navigationItem.hidesBackButton = true
+        setupNavigationBarAppearance()
 
         // ダミーのヘッダー用のViewの高さとY軸方向位置を算出する
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
@@ -111,6 +109,17 @@ class DetailViewController: UIViewController {
 
         // 画面表示が完了したら画像のパララックス効果付きのViewに画像をセットする
         detailHeaderView.setHeaderImage(targetFood.imageFile!)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // MEMO: iOS15以上の場合のみ、ダミーのヘッダー用のViewをアルファ値を徐々に消していく処理をする
+        if #available(iOS 15.0, *) {
+            UIView.animate(withDuration: 0.28, delay: 0.00, options: [.curveEaseInOut], animations: {
+                self.animationDetailHeaderView.alpha = 0.0
+            }, completion: nil)
+        }
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -208,6 +217,33 @@ class DetailViewController: UIViewController {
         })
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
+    }
+
+    // MEMO: このケースではUINavigationBarAppearance()の設定をまとめてではなく、個別に設定している
+    private func setupNavigationBarAppearance() {
+
+        // iOS15以降ではUINavigationBarの配色指定方法が変化する点に注意する
+        // https://shtnkgm.com/blog/2021-08-18-ios15.html
+        if #available(iOS 15.0, *) {
+            let navigationBarAppearance = UINavigationBarAppearance()
+            navigationBarAppearance.configureWithOpaqueBackground()
+
+            // MEMO: UINavigationBar内部におけるタイトル文字の装飾設定
+            navigationBarAppearance.titleTextAttributes = [
+                NSAttributedString.Key.font : UIFont(name: "HiraKakuProN-W6", size: 14.0)!,
+                NSAttributedString.Key.foregroundColor : UIColor.clear
+            ]
+
+            // MEMO: UINavigationBar背景色の装飾設定
+            navigationBarAppearance.backgroundColor = .clear
+
+            UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+            UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+        } else {
+            self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            self.navigationController!.navigationBar.shadowImage = UIImage()
+            self.navigationItem.hidesBackButton = true
+        }
     }
 }
 
