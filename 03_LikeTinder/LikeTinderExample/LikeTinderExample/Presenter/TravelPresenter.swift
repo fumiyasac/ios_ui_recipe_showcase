@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol TravelPresenterProtocol: class {
+protocol TravelPresenterProtocol: AnyObject {
     func bindTravelModels(_ travelModels: [TravelModel])
 }
 
