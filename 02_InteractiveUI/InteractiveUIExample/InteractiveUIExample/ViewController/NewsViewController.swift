@@ -62,5 +62,4 @@ class NewsViewController: UIViewController {
             UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
         }
     }
-
 }
