@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 // FoodPresenterの処理を実行した際にViewController側で行う処理のプロトコル定義
-protocol FoodPresenterProtocol: class {
+protocol FoodPresenterProtocol: AnyObject {
     func getFoodList(_ foods: [Food])
 }
 
